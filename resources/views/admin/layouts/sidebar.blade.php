@@ -48,7 +48,7 @@ $footer = GeneralSetting::select('footer_detail','header_logo')->where('id', 1)-
                             @if (auth()->user()->role == 'admin')
                                 @if (isset($menu->role) && $menu->role == 'admin')
                                     <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0)' }}"
-                                        class="d-flex align-items-center mt-1"
+                                        class="d-flex align-items-center margin"
                                         target="{{ isset($menu->newTab) ? '_blank' : '_self' }}">
                                         <i style="height: 16px;" class="{{ $menu->icon }}"></i>
                                         <span class="menu-title text-truncate">{{ __($menu->name) }}</span>
