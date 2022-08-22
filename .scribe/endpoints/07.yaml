@@ -1,0 +1,121 @@
+name: 'Services app'
+description: |-
+
+  APIs endpoints for managing Services creation, updation, deletion and showing data.
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/get-all-services
+    metadata:
+      title: 'Listing Of Services'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      page:
+        name: page
+        description: 'an optional, by default its consider as 1.'
+        required: false
+        example: '1'
+        type: Its
+        custom: []
+      limit:
+        name: limit
+        description: 'an optional, by default its consider as 20.'
+        required: false
+        example: '20'
+        type: Its
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true/false,
+            "message": string/null,
+            "data": [
+                {
+                    "id": string/null,
+                    "product_name": string/null,
+                    "price": string/null,
+                    "status": "1/0"
+                }
+            ],
+            "nextPage": false,
+            "limit": number/20
+           }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/add-service
+    metadata:
+      title: 'Add OR Update The Services'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: 'Its required parameter and must has product_name,price,status parameters in each row. Pass the id parameter if service record has to update.'
+        required: false
+        example: '[{"id":string/null,"product_name":string/null,"price":string/null,"status":"1/0"}]'
+        type: required
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true/false,
+            "message": string/null,
+           }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/delete-service/{id}'
+    metadata:
+      title: 'Delete Of Services'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the delete service.'
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true/false,
+            "message": string/null,
+           }
+        headers: []
+        description: '200'
+    responseFields: []

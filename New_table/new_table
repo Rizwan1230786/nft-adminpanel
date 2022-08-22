@@ -1,0 +1,7 @@
+1.
+10:27 AM new table add in customers table
+ALTER TABLE `customers` ADD `password` VARCHAR(200) NULL DEFAULT NULL AFTER `email`;
+2.
+1:00 pm new pakeg instal in twilio
+composer require twilio/sdk
+3.

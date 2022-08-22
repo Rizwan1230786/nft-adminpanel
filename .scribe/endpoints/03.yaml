@@ -1,0 +1,64 @@
+name: 'NFC request app'
+description: |-
+
+  APIs endpoints for managing NFC requests
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/nfcrequest
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: itaque
+        type: string
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: true
+        example: odio
+        type: string
+        custom: []
+      contact:
+        name: contact
+        description: ''
+        required: true
+        example: reprehenderit
+        type: string
+        custom: []
+      detail:
+        name: detail
+        description: ''
+        required: true
+        example: dolor
+        type: string
+        custom: []
+      shop_name:
+        name: shop_name
+        description: ''
+        required: true
+        example: reiciendis
+        type: string
+        custom: []
+      address:
+        name: address
+        description: ''
+        required: true
+        example: officiis
+        type: string
+        custom: []
+    responses: []
+    responseFields: []

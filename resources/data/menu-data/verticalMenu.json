@@ -1,0 +1,151 @@
+{
+  "menu": [
+    {
+      "name": "Dashboard",
+      "badgeClass": "badge badge-light-warning rounded-pill ms-auto me-1",
+      "url": "admin/dashboard",
+      "icon": "fas fa-home",
+      "slug": "dashboard-ecommerce",
+      "role": "admin",
+      "roles": "subadmin"
+    },
+    {
+      "navheader": "Menu",
+      "slug": ""
+    },
+    {
+      "url": "admin/user/list",
+      "name": "User",
+      "icon": "fas fa-user-tie",
+      "slug": "app-user-list",
+      "role": "admin"
+    },
+    {
+      "url": "#",
+      "name": "Sellers",
+      "icon": "fas fa-shopping-bag",
+      "slug": "sellers",
+      "role": "admin",
+      "submenu":[
+        {
+          "url": "admin/all-clients/list",
+          "name": "All Sellers",
+          "icon": "fas fa-users",
+          "slug": "all-client",
+          "role": "admin"
+        },
+        {
+          "url": "admin/gold/list",
+          "name": "Gold Sellers",
+          "icon": "fas fa-user-shield",
+          "slug": "gold",
+          "role": "admin"
+        },
+        {
+          "url": "admin/Personal/list",
+          "name": "Personal Sellers",
+          "icon": "fas fa-people-arrows",
+          "slug": "personal",
+          "role": "admin"
+        },
+        {
+          "url": "admin/seller/link",
+          "name": "Sellers-link",
+          "icon": "fas fa-link",
+          "slug": "seller",
+          "role": "admin"
+        }
+      ]
+    },
+    {
+      "url": "admin/customer/list",
+      "name": "Customers",
+      "icon": "fas fa-users",
+      "slug": "customer",
+      "role": "admin"
+    },
+    {
+      "url": "#",
+      "name": "NFTs",
+      "icon": "fas fa-poll",
+      "slug": "nfts",
+      "role": "admin",
+      "submenu":[
+        {
+          "url": "admin/nfts/list",
+          "name": "NFTs List",
+          "icon": "fas fa-people-arrows",
+          "slug": "nfts",
+          "role": "admin"
+        },
+        {
+          "url": "admin/category/list",
+          "name": "Categories",
+          "icon": "fas fa-people-arrows",
+          "slug": "category",
+          "role": "admin"
+        },
+        {
+          "url": "admin/collection/list",
+          "name": "Collections",
+          "icon": "fas fa-people-arrows",
+          "slug": "collection",
+          "role": "admin"
+        }
+      ]
+    },
+    {
+      "url": "admin/webpage",
+      "name": "Webpages",
+      "icon": "fas fa-pager",
+      "slug": "webpage",
+      "role": "admin",
+      "roles": "subadmin"
+    },
+    {
+        "url": "admin/blog/list",
+        "name": "Blog",
+        "icon": "fas fa-pager",
+        "slug": "blog",
+        "role": "admin"
+      },
+    {
+      "url": "admin/genralseeting",
+      "name": "General Settings",
+      "icon": "fas fa-cog",
+      "slug": "genralseting",
+      "role": "admin",
+      "submenu":[
+        {
+          "url": "admin/role-list",
+          "name": "Roles",
+          "icon": "fas fa-users-cog",
+          "slug": "app-roles-list",
+          "role": "admin"
+        },
+        {
+          "url": "admin/permission/list",
+          "name": "Permission",
+          "icon": "fas fa-unlock-alt",
+          "slug": "permission",
+          "role": "admin"
+        },
+        {
+            "url": "admin/IncomeReport/list",
+            "name": "Income Report",
+            "icon": "fas fa-address-book",
+            "slug": "income",
+            "role": "admin",
+            "roles": "subadmin"
+        },
+        {
+          "url": "admin/headerfooter",
+          "name": "HeaderFooter",
+          "icon": "fas fa-cog",
+          "slug": "headerfooter",
+          "role": "admin"
+        }
+      ]
+    }
+  ]
+}

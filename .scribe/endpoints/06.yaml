@@ -1,0 +1,158 @@
+name: 'Seller Profile app'
+description: |-
+
+  APIs endpoints for managing seller
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/update-basic-detail
+    metadata:
+      title: 'Basic Detail Update'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      fullname:
+        name: fullname
+        description: 'Full name of the Seller.'
+        required: true
+        example: abc
+        type: string
+        custom: []
+      displayname:
+        name: displayname
+        description: 'Display name of the Seller.'
+        required: true
+        example: abc
+        type: string
+        custom: []
+      theme:
+        name: theme
+        description: 'validation.required_without_all  Must be one of <code>light</code> or <code>dark</code>.'
+        required: false
+        example: light
+        type: string
+        custom: []
+      plan:
+        name: plan
+        description: 'validation.required_without_all  Must be one of <code>personal</code> or <code>gold</code>.'
+        required: false
+        example: gold
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true/false,
+            "message": string,
+            "data": {
+               "id": number/null,
+               "fullname": string/null,
+               "displayname": string/null
+            }
+            }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/update-seller-profile
+    metadata:
+      title: 'Update Seller Image'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: 'validation.image validation.max.'
+        required: true
+        example: null
+        type: file
+        custom: []
+      fullname:
+        name: fullname
+        description: 'Full name of the Seller.'
+        required: true
+        example: abc
+        type: string
+        custom: []
+      displayname:
+        name: displayname
+        description: 'Display name of the Seller.'
+        required: true
+        example: abc
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true/false,
+            "message": string,
+            "data": {
+               "id": number/null,
+               "fullname": string/null,
+               "displayname": string/null
+            }
+            }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/check-stripe-status
+    metadata:
+      title: 'Check Seller Stripe Status'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/get_path
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
