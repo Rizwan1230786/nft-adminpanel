@@ -13,6 +13,7 @@ use App\Models\Income;
 use App\Models\GoldClient;
 use App\Models\SellerLinks;
 use App\Models\Customer;
+use App\Models\Generalsetting;
 use carbon\Carbon;
 use Charts;
 use Illuminate\Support\Facades\DB;
@@ -20,6 +21,7 @@ class DashboardController extends Controller
 {
   public function dashboardAnalytics()
   {
+
     $pageConfigs = ['pageHeader' => false];
     return view('admin/module/dashboard/dashboard-analytics', ['pageConfigs' => $pageConfigs]);
   }
@@ -38,7 +40,7 @@ class DashboardController extends Controller
     ////for getting the last month revenue
     $date = Carbon::now()->subMonth()->startOfDay();
     $revenue = Income::where('month', '>=', $date)->latest()->value('revenue');
-    /////for Calculating the profit 
+    /////for Calculating the profit
     // $date=GoldClient::latest()->value('order_date');
     // $profit=GoldClient::latest()->value('orders_payment');
     // $profit=$profit*0.05;
@@ -58,11 +60,11 @@ class DashboardController extends Controller
     $sellerlink=SellerLinks::count();
     return view('admin/module/dashboard/dashboard-ecommerce', ['pageConfigs' => $pageConfigs, 'user' => $user, 'customer' => $customer, 'revenue' => $revenue,  'data' => $data, 'profit' => $profit, 'order' => $order,'allclient'=>$allclient,'goldclient'=>$goldclient,'personalclient'=>$personalclient,'date' => $date,'total'=>$total,'viewer'=>$viewer,'click'=>$click,'sellerlink'=>$sellerlink]);
   }
- 
+
 }
-  // 
- 
-  
+  //
+
+
 
 
 

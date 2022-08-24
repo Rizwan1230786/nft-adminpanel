@@ -18730,7 +18730,7 @@ footer.footer-border {
 .main-menu .navbar-header .navbar-brand {
   display: flex;
   align-items: center;
-  margin-top: 1.35rem;
+  margin-top: 10px;
   font-size: inherit;
 }
 .main-menu .navbar-header .navbar-brand .brand-logo img {
@@ -21222,6 +21222,7 @@ tr.group {
 }
 label{
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 .margin{
     margin-top: 5px!important;

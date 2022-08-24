@@ -17,4 +17,8 @@ class CustomerController extends Controller
         $client = Customer::all();
         return view('/admin/module/customer/customer-list', compact('client'));
     }
+    public function create()
+    {
+        return view('/admin/module/customer/create');
+    }
 }

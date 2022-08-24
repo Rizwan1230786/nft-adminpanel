@@ -1,7 +1,9 @@
 @php
 use App\Models\GeneralSetting;
 $configData = Helper::applClasses();
-$footer = GeneralSetting::select('footer_detail','header_logo')->where('id', 1)->first();
+$header = GeneralSetting::select('footer_detail', 'header_logo')
+    ->where('id', 1)
+    ->first();
 @endphp
 <div class="main-menu menu-fixed {{ $configData['theme'] === 'dark' || $configData['theme'] === 'semi-dark' ? 'menu-dark' : 'menu-light' }} menu-accordion menu-shadow"
     data-scroll-to-active="true">
@@ -9,11 +11,8 @@ $footer = GeneralSetting::select('footer_detail','header_logo')->where('id', 1)-
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <div class="brand-logo">
-                        <img src="{{ asset('setting/header/'.$footer->header_logo) }}" alt="">
-                    </div>
                     @role('admin')
-                        <h2 class="brand-text">NFTs</h2>
+                        <img src="{{ asset('setting/header/' . $header->header_logo) ?? '' }}" alt="">
                     @endrole
                     @hasexactroles('subadmin')
                         <h2 class="brand-text">NFTs</h2>
@@ -44,7 +43,8 @@ $footer = GeneralSetting::select('footer_detail','header_logo')->where('id', 1)-
                                 $custom_classes = $menu->classlist;
                             }
                         @endphp
-                        <li class="nav-item {{ $custom_classes }} {{ Route::currentRouteName() === $menu->slug ? 'active' : '' }}">
+                        <li
+                            class="nav-item {{ $custom_classes }} {{ Route::currentRouteName() === $menu->slug ? 'active' : '' }}">
                             @if (auth()->user()->role == 'admin')
                                 @if (isset($menu->role) && $menu->role == 'admin')
                                     <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0)' }}"

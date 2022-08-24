@@ -36,6 +36,13 @@
           <h4 class="card-title">Customers list</h4>
       </div>
       <div class="table-responsive width-95-per mx-auto">
+        <div class="dt-buttons float-end" style="margin-left: 20px; margin-top: 14px;">
+            <button class="dt-button add-new btn btn-success waves-effect waves-float waves-light" tabindex="0"
+                aria-controls="DataTables_Table_0" type="button"
+                onclick="window.location.href='/admin/create/customer'">
+                <span>Add New</span>
+            </button>
+        </div>
         <table class="table datatable">
           <thead>
             <tr>

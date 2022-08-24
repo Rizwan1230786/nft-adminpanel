@@ -35,7 +35,7 @@ class permissionController extends Controller
             $type="success";
             $message="Data Add Successfully";
         }
-        return response()->json(['type'=>$type,'message'=>$message]); 
+        return response()->json(['type'=>$type,'message'=>$message]);
     }
     public function edit($id){
         $permission=Permission::find($id);
@@ -53,7 +53,7 @@ class permissionController extends Controller
             $type="success";
             $message="Data Updated Successfully";
         }
-        return response()->json(['type'=>$type,'message'=>$message]); 
+        return response()->json(['type'=>$type,'message'=>$message]);
     }
     public function destroy($id){
         $delete=Permission::findorfail($id);

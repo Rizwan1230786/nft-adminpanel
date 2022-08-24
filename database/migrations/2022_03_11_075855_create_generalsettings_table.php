@@ -15,8 +15,16 @@ class CreateGeneralsettingsTable extends Migration
     {
         Schema::create('generalsettings', function (Blueprint $table) {
             $table->id();
-            $table->string('header_logo');
-            $table->string('footer_detail');
+            $table->string('header_logo')->nullable();
+            $table->string('favicon_image')->nullable();
+            $table->string('website_logo')->nullable();
+            $table->string('header_bg_img')->nullable();
+            $table->string('footer_bg_img')->nullable();
+            $table->string('application_title')->nullable();
+            $table->string('address')->nullable();
+            $table->string('email_address')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('footer_detail')->nullable();
             $table->timestamps();
         });
     }

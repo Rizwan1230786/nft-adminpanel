@@ -105,6 +105,7 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::get('/nfts/list',[SellersController::class,'services_list'])->name('services-list');
         /////customer route/////
         Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer-list');
+        Route::get('/create/customer', [CustomerController::class, 'create'])->name('create-customer');
         /////general seeting//////
         Route::get('/headerfooter',[GeneralSettingController::class,'create'])->name('headerfooter');
         Route::post('/submit-generalsetting',[GeneralSettingController::class,'submit'])->name('submit-generalsetting');

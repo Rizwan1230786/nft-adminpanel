@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use PDF;
 use PdfReport;
 
-class IncomeController extends Controller 
+class IncomeController extends Controller
 {
     private $user;
     function __construct(Income $user)
@@ -21,7 +21,7 @@ class IncomeController extends Controller
         $this->middleware('permission:incomereport-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:incomereport-delete', ['only' => ['destroy']]);
     }
-    //// function for view income list  
+    //// function for view income list
     public function index()
     {
         $pageConfigs = ['pageHeader' => false];
