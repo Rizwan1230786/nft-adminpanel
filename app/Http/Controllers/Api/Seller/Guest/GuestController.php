@@ -51,6 +51,7 @@ class GuestController extends Controller
      */
     public function register(SellerRegistration $request)
     {
+        dd('ok');
         $token = "";
         $statusCode = 401;
         $message = "Fill the data in proper way";

@@ -24,8 +24,7 @@ class CustomerAuthentication extends FormRequest
     {
         return [
             'email' => 'required|email|exists:customers,email',
-            'macaddress' => 'required|MacAddress',
-            'otp' => 'required|min:6|max:6',
+            'password' => 'required|min:6|',
         ];
     }
     public function messages()
@@ -34,11 +33,8 @@ class CustomerAuthentication extends FormRequest
             'email.required' => __('Email is required.'),
             'email.email' => __('You need to provide valid email address.'),
             'email.exists' => __('Email not exist.'),
-            'macaddress.required' => __('Mac address required'),
-            'macaddress.MacAddress' => __('Mac address is not valid'),
-            'otp.required' => __('OTP code is required'),
-            'otp.min' => __('OTP should be 6 digit'),
-            'otp.max' => __('OTP should be 6 digit'),
+            'password.required' => __('Password is required'),
+            'password.min' => __('Password should be atleast 6 digit'),
         ];
     }
 }

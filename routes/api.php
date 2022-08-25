@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\Customer\Guest\CustomerGuestController;
 use App\Http\Controllers\Api\Customer\Order\CustomerOrderController;
 use App\Http\Controllers\Api\Seller\Authorization\ChangePasswordController;
 use App\Http\Controllers\Api\Customer\Profile\ProfileController;
+use App\Http\Controllers\api\front\FrontController;
 use App\Http\Controllers\Api\Stripe\StripeController;
 use App\Http\Controllers\Table\DatabaseManageController;
 use App\Http\Middleware\CheckStatus;
@@ -57,6 +58,7 @@ Route::post('/get_path', [AuthController::class, 'image_path_with_default']);
 Route::get('/payment-history', [StripeController::class, 'payment_history']);
 ////Customer Api
 Route::prefix('/customer')->group(function () {
+    Route::post('/customer-register', [CustomerGuestController::class, 'signup']);
     Route::post('/customer-login', [CustomerGuestController::class, 'login']);
     Route::post('/send-otp-code', [CustomerGuestController::class, 'sendOTPCode']);
     Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
@@ -67,6 +69,7 @@ Route::prefix('/customer')->group(function () {
 
     });
 });
+Route::get('/index', [FrontController::class, 'index']);
 Route::post('/nfcrequest', [NfcRequestController::class, 'submit']);
 Route::get('/webpages_show/{provider}', [WebController::class, 'webpages_show_provider']);
 Route::get('/webpages_show', [WebController::class, 'webpages_show']);

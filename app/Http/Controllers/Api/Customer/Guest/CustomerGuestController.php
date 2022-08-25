@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers\Api\Customer\Guest;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\Customer\CustomerAuthentication;
-use App\Http\Requests\Customer\GetLinkDetail;
-use App\Http\Requests\Customer\OtpAuthentication;
-use App\Http\Traits\Helpers;
+use Carbon\Carbon;
 use App\Models\Customer;
 use App\Models\DeviceOtp;
-use App\Models\LinksService;
 use App\Models\SellerLinks;
-use Carbon\Carbon;
+use App\Http\Traits\Helpers;
+use App\Models\LinksService;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\Customer\GetLinkDetail;
+use App\Http\Requests\Customer\OtpAuthentication;
+use App\Http\Requests\Customer\CustomerAuthentication;
+use App\Http\Requests\Customer\Customercreation;
 
 class CustomerGuestController extends Controller
 {
@@ -41,29 +45,55 @@ class CustomerGuestController extends Controller
      * }
      *
      */
+
+    public function signup(Customercreation $request)
+    {
+        $data = $request->all();
+        $data['password'] = Hash::make($request->password);
+        $query = Customer::create($data);
+        if ($query) {
+            return response(['status' => true, 'message' => 'data inserted successfuly',]);
+        } else {
+            return response(['status' => false, 'message' => 'data not inserted']);
+        }
+    }
+
     public function login(CustomerAuthentication $request)
     {
-        $statusCode = 401;
-        $message = "Fill the data in proper way!";
-        $token = "";
-        $request = $request->all();
-        $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
-        if (isset($customer->id) && !empty($customer->id) && isset($request['macaddress']) && !empty($request['macaddress']) && isset($request['otp']) && !empty($request['otp'])) {
-            $deviceOtp = DeviceOtp::select(['id', 'code_expiry'])->Where(['customer_id' => $customer->id, "macaddress" => $request['macaddress'], "otp" => $request['otp']])->first();
-            if (isset($deviceOtp->code_expiry) && !empty($deviceOtp->code_expiry) && $deviceOtp->code_expiry >= Carbon::now()->toDateTimeString()) {
-                $statusCode = 200;
-                $message = "Login successfully";
-                Auth::guard('customer')->login($customer);
-                $data = Auth::guard('customer')->user();
-                $token = $data->createToken('auth_token')->accessToken;
-                DeviceOtp::where("id", $deviceOtp->id)->update(array("is_verified" => "1"));
-            } else {
-                $customer = array();
-                $message = "OTP code is expired";
-            }
+
+        if (Auth::guard('customer')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
+            $data = Auth::guard('customer')->user();
+            $token = $data->createToken('myapp')->accessToken;
+            return response(['status' => true, 'message' => 'Login successfully', 'data' => ['users' => $customer], 'access_token' => $token ,'token_type' => 'Bearer']);
+        } else {
+            return response(['status' => false, 'message' => 'please enter a correct email or password']);
         }
-        return response(['status' => ($statusCode == 200 ? true : false), 'message' => ($statusCode == 200 ? 'Login Successfully' : $message), "data" => ($customer ?? array()), 'access_token' => $token, 'token_type' => 'Bearer'], $statusCode);
     }
+    // public function login(CustomerAuthentication $request)
+    // {
+    //     dd('ok');
+    //     $statusCode = 401;
+    //     $message = "Fill the data in proper way!";
+    //     $token = "";
+    //     $request = $request->all();
+    //     $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
+    //     if (isset($customer->id) && !empty($customer->id) && isset($request['macaddress']) && !empty($request['macaddress']) && isset($request['otp']) && !empty($request['otp'])) {
+    //         $deviceOtp = DeviceOtp::select(['id', 'code_expiry'])->Where(['customer_id' => $customer->id, "macaddress" => $request['macaddress'], "otp" => $request['otp']])->first();
+    //         if (isset($deviceOtp->code_expiry) && !empty($deviceOtp->code_expiry) && $deviceOtp->code_expiry >= Carbon::now()->toDateTimeString()) {
+    //             $statusCode = 200;
+    //             $message = "Login successfully";
+    //             Auth::guard('customer')->login($customer);
+    //             $data = Auth::guard('customer')->user();
+    //             $token = $data->createToken('auth_token')->accessToken;
+    //             DeviceOtp::where("id", $deviceOtp->id)->update(array("is_verified" => "1"));
+    //         } else {
+    //             $customer = array();
+    //             $message = "OTP code is expired";
+    //         }
+    //     }
+    //     return response(['status' => ($statusCode == 200 ? true : false), 'message' => ($statusCode == 200 ? 'Login Successfully' : $message), "data" => ($customer ?? array()), 'access_token' => $token, 'token_type' => 'Bearer'], $statusCode);
+    // }
     /**
      * Send OTP Code
      *
