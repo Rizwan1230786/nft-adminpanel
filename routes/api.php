@@ -1,21 +1,22 @@
 <?php
 
-use App\Http\Controllers\Api\Barber\Profile\BarberController;
-use App\Http\Controllers\Api\Seller\Authorization\AuthController;
-use App\Http\Controllers\Api\Seller\Guest\GuestController;
-use App\Http\Controllers\Api\Seller\Links\Links;
-use App\Http\Controllers\Api\Seller\Services\ServicesController;
-use App\Http\Controllers\Api\Webpages\WebController;
-use App\Http\Controllers\Api\NFC\NfcRequestController;
+use App\Http\Middleware\CheckStatus;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\Seller\Links\Links;
+use App\Http\Controllers\api\items\ItemController;
+use App\Http\Controllers\api\front\FrontController;
+use App\Http\Controllers\Api\Webpages\WebController;
+use App\Http\Controllers\Api\Stripe\StripeController;
+use App\Http\Controllers\Api\NFC\NfcRequestController;
+use App\Http\Controllers\Table\DatabaseManageController;
+use App\Http\Controllers\Api\Seller\Guest\GuestController;
+use App\Http\Controllers\Api\Barber\Profile\BarberController;
+use App\Http\Controllers\Api\Customer\Profile\ProfileController;
+use App\Http\Controllers\Api\Seller\Services\ServicesController;
+use App\Http\Controllers\Api\Seller\Authorization\AuthController;
 use App\Http\Controllers\Api\Customer\Guest\CustomerGuestController;
 use App\Http\Controllers\Api\Customer\Order\CustomerOrderController;
 use App\Http\Controllers\Api\Seller\Authorization\ChangePasswordController;
-use App\Http\Controllers\Api\Customer\Profile\ProfileController;
-use App\Http\Controllers\api\front\FrontController;
-use App\Http\Controllers\Api\Stripe\StripeController;
-use App\Http\Controllers\Table\DatabaseManageController;
-use App\Http\Middleware\CheckStatus;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -60,16 +61,18 @@ Route::get('/payment-history', [StripeController::class, 'payment_history']);
 Route::prefix('/customer')->group(function () {
     Route::post('/customer-register', [CustomerGuestController::class, 'signup']);
     Route::post('/customer-login', [CustomerGuestController::class, 'login']);
-    Route::post('/send-otp-code', [CustomerGuestController::class, 'sendOTPCode']);
-    Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
+    // Route::post('/send-otp-code', [CustomerGuestController::class, 'sendOTPCode']);
+    // Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
     Route::group(['middleware' => 'auth:customerapi'], function () {
         Route::get('/profile', [ProfileController::class, 'customer_profile']);
         Route::post('/profile/update', [ProfileController::class, 'customer']);
         Route::post('/customer_order',[CustomerOrderController::class, 'customer_order']);
-
+        ///////route of items//////////////////
+        Route::post('/create-items', [ItemController::class, 'submit']);
     });
 });
 Route::get('/index', [FrontController::class, 'index']);
+
 Route::post('/nfcrequest', [NfcRequestController::class, 'submit']);
 Route::get('/webpages_show/{provider}', [WebController::class, 'webpages_show_provider']);
 Route::get('/webpages_show', [WebController::class, 'webpages_show']);
