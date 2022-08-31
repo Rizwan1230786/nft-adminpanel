@@ -30,6 +30,19 @@ use App\Models\Customer;
             counter-increment: section;
             content: counter(section);
         }
+        .dropdown-item1 {
+            display: block;
+            width: 100%;
+            padding: 1.65rem 1.28rem;
+            clear: both;
+            font-weight: 400;
+            color: #6e6b7b;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+
+        }
     </style>
     <!--Filter Form  -->
     <!-- Basic Tables start -->
@@ -82,12 +95,12 @@ use App\Models\Customer;
                                     </td>
                                     <td class="d-flex">
                                         <div>
-                                            <a class="dropdown-item" href="/admin/edit/collection/{{ $data->id }}">
+                                            <a class="dropdown-item1" href="/admin/edit/collection/{{ $data->id }}">
                                                 <i data-feather="edit" class="font-medium-2 text-body me-50"></i>
                                             </a>
                                         </div>
                                         <div>
-                                            <button class="btn btn-flat btn-sm remove-user dropdown-item"
+                                            <button class="btn btn-flat btn-sm remove-user dropdown-item1"
                                                 data-id="{{ $data->id }}"
                                                 data-action="{{ url('/collection/delete', $data->id) }}"
                                                 onclick="deleteConfirmation({{ $data->id }})">

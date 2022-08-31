@@ -18,16 +18,16 @@
 @endsection
 
 @section('content')
-<style>
-  table {
-    counter-reset: section;
-  }
+    <style>
+        table {
+            counter-reset: section;
+        }
 
-  .count:before {
-    counter-increment: section;
-    content: counter(section);
-  }
-</style>
+        .count:before {
+            counter-increment: section;
+            content: counter(section);
+        }
+    </style>
     <!--Filter Form  -->
     <!-- Basic Tables start -->
     <div class="row" id="basic-table">
@@ -38,8 +38,8 @@
                 </div>
                 <div class="table-responsive width-95-per mx-auto">
                     <div class="dt-buttons float-end" style="margin-left: 20px; margin-top: 14px;">
-                        <button class="dt-button add-new btn btn-success waves-effect waves-float waves-light" tabindex="0"
-                            aria-controls="DataTables_Table_0" type="button"
+                        <button class="dt-button add-new btn btn-success waves-effect waves-float waves-light"
+                            tabindex="0" aria-controls="DataTables_Table_0" type="button"
                             onclick="window.location.href='/admin/blog-create'">
                             <span>Add New</span>
                         </button>
@@ -57,16 +57,16 @@
                         <tbody>
                             @foreach ($user as $data)
                                 <tr>
-                                <td class="count"></td>
-                                    <td title="{{ $data->title }}">{{Str::limit($data->title, 20)}}</td>
-                                    <td><img src="{{ asset('images/blog/'.$data->image) }}" width="50" height="50" style="border-radius:10px;" alt=""></td>
+                                    <td class="count"></td>
+                                    <td title="{{ $data->title }}">{{($data->title) }}</td>
+                                    <td><img src="{{ asset('images/blog/' . $data->image) }}" width="50" height="50"
+                                            style="border-radius:10px;" alt=""></td>
                                     <td>
                                         <div class="d-flex flex-column">
                                             <div class="form-check form-switch form-check-success">
                                                 <input name="is_publish" type="checkbox"
                                                     class="form-check-input toggle-class" id="customSwitch1"
-                                                    data-id="{{ $data->id }}"
-                                                    {{ $data->status ? 'checked' : '' }} />
+                                                    data-id="{{ $data->id }}" {{ $data->status ? 'checked' : '' }} />
                                             </div>
                                         </div>
                                     </td>
@@ -77,7 +77,8 @@
                                             </a>
                                         </div>
                                         <div>
-                                            <button class="btn btn-flat btn-sm remove-user dropdown-item" data-id="{{ $data->id }}"
+                                            <button class="btn btn-flat btn-sm remove-user dropdown-item"
+                                                data-id="{{ $data->id }}"
                                                 data-action="{{ url('/blog/blog_delete', $data->id) }}"
                                                 onclick="deleteConfirmation({{ $data->id }})">
                                                 <i data-feather="trash" class="font-medium-2 text-body me-50"></i>
@@ -141,24 +142,24 @@
             if (e.value === true) {
                 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
-        $.ajax({
-          type: 'POST',
-          url: "{{url('admin/blog/delete')}}/" + id,
-          data: {
-            _token: CSRF_TOKEN
-          },
-          dataType: 'JSON',
-          success: function(results) {
-            swal.fire({
-              title: "Done",
-              icon: 'success',
-              text: "Data Deleted Successfully",
-              type: "success"
-            }).then(function() {
-              location.reload();
-            });
-          }
-        });
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ url('admin/blog/delete') }}/" + id,
+                    data: {
+                        _token: CSRF_TOKEN
+                    },
+                    dataType: 'JSON',
+                    success: function(results) {
+                        swal.fire({
+                            title: "Done",
+                            icon: 'success',
+                            text: "Data Deleted Successfully",
+                            type: "success"
+                        }).then(function() {
+                            location.reload();
+                        });
+                    }
+                });
             } else {
                 e.dismiss;
             }
@@ -169,28 +170,28 @@
     }
 </script>
 <script>
-$(function() {
-    $('.toggle-class').change(function() {
-      var status = $(this).prop('checked') == true ? 1 : 0;
-      var id = $(this).data('id');
-      $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: '/admin/blog/status',
-        data: {
-          'status': status,
-          'id': id
-        },
-        success: function(data) {
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Status Changed',
-            showConfirmButton: false,
-            timer: 1100
-          });
-        }
-      });
-    })
-});
+    $(function() {
+        $('.toggle-class').change(function() {
+            var status = $(this).prop('checked') == true ? 1 : 0;
+            var id = $(this).data('id');
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: '/admin/blog/status',
+                data: {
+                    'status': status,
+                    'id': id
+                },
+                success: function(data) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Status Changed',
+                        showConfirmButton: false,
+                        timer: 1100
+                    });
+                }
+            });
+        })
+    });
 </script>

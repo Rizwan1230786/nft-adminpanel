@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Generalsetting;
+use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\File;
 
 class GeneralSettingController extends Controller
@@ -12,7 +12,7 @@ class GeneralSettingController extends Controller
     public function create()
     {
         $updatedId = 1;
-        $data = Generalsetting::where('id', $updatedId)->first();
+        $data = GeneralSetting::where('id', $updatedId)->first();
         return view('admin.module.generalsetting.create', compact('data'));
     }
     public function submit(Request $request)
