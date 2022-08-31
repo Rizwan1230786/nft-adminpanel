@@ -6,6 +6,7 @@ use App\Models\Collection;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 
@@ -19,6 +20,7 @@ class CollectionsController extends Controller
     public function create()
     {
         $category=Category::select('id','name')->get();
+        $customer=Customer::select('id','firstname')->get();
         return view('admin.module.collection.create',get_defined_vars());
     }
     public function submit(Request $request)
@@ -54,6 +56,7 @@ class CollectionsController extends Controller
     {
         $record = Collection::find($id);
         $category=Category::select('id','name')->get();
+        $customer=Customer::select('id','firstname')->get();
         return view('admin.module.collection.create', get_defined_vars());
     }
     public function update(Request $request, $id)

@@ -71,7 +71,13 @@ Route::prefix('/customer')->group(function () {
         Route::post('/create-items', [ItemController::class, 'submit']);
     });
 });
-Route::get('/index', [FrontController::class, 'index']);
+Route::get('/index', [FrontController::class, 'index'])->name('index');
+Route::prefix('/blog')->group(function () {
+    Route::get('/', [FrontController::class, 'blog'])->name('blog');
+    Route::get('/detail/{slug}', [FrontController::class, 'blog_detail'])->name('blog_detail');
+});
+Route::get('/explore', [FrontController::class, 'explore'])->name('explore');
+Route::get('/author', [FrontController::class, 'author'])->name('author');
 
 Route::post('/nfcrequest', [NfcRequestController::class, 'submit']);
 Route::get('/webpages_show/{provider}', [WebController::class, 'webpages_show_provider']);

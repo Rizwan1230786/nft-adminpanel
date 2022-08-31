@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Collection extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'detail', 'image','banner_image','category_id','user_id'];
+    protected $fillable = ['name', 'detail', 'image','banner_image','category_id','customer_id'];
+
 }

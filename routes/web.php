@@ -107,6 +107,10 @@ Route::group(['middleware' => 'auth:web'], function () {
         /////customer route/////
         Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer-list');
         Route::get('/create/customer', [CustomerController::class, 'create'])->name('create-customer');
+        Route::post('/customer/add', [CustomerController::class, 'submit'])->name('customeradd');
+        Route::get('/edit/customer/{id}', [CustomerController::class, 'edit'])->name('form-customeredit');
+        Route::post('/customer/add/{id}', [CustomerController::class, 'update'])->name('customeredit');
+        Route::post('/customer/delete/{id}', [CustomerController::class, 'destory'])->name('usersdlt');
         /////general seeting//////
         Route::get('/headerfooter',[GeneralSettingController::class,'create'])->name('headerfooter');
         Route::post('/submit-generalsetting',[GeneralSettingController::class,'submit'])->name('submit-generalsetting');

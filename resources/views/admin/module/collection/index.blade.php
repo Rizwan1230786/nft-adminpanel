@@ -1,3 +1,6 @@
+<?php
+use App\Models\Customer;
+?>
 @extends('admin/contentLayoutMaster')
 
 @section('title', 'Collection List')
@@ -49,8 +52,9 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Logo</th>
-                                <th>Name</th>
+                                <th>Collection Name</th>
                                 <th>detail</th>
+                                <th>User Name</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -63,6 +67,10 @@
                                             height="50" style="border-radius:10px;" alt=""></td>
                                     <td>{{ Str::limit($data->name, 20) }}</td>
                                     <td title="{{ $data->detail }}">{{ Str::limit($data->detail, 20) }}</td>
+                                    @php
+                                        $customer=Customer::where('id',$data->customer_id)->first();
+                                    @endphp
+                                    <td>{{ $customer->firstname ?? 'Admin'}}</td>
                                     <td>
                                         <div class="d-flex flex-column">
                                             <div class="form-check form-switch form-check-success">

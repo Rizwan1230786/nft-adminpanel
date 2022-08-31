@@ -69,6 +69,27 @@
                                             @endif
                                         </div>
                                         <div class="col-sm-8 offset-2 mt-1">
+                                            <label for="">Customers</label>
+                                            @if (isset($record->id) && $record->id != 0)
+                                                <select class="form-select" id="basicSelect" name="customer_id">
+                                                    <option value="">Select User</option>
+                                                    @foreach ($customer as $data)
+                                                        <option value="{{ $data->id }}"
+                                                            {{ $record->customer_id == $data->id ? 'selected' : '' }}>
+                                                            {{ $data->firstname }}</option>
+                                                    @endforeach
+                                                </select>
+                                            @else
+                                                <select class="form-select" id="basicSelect" name="customer_id">
+                                                    <option value="">Select User</option>
+                                                    @foreach ($customer as $data)
+                                                        <option value="{{ $data->id }}">
+                                                            {{ $data->firstname }}</option>
+                                                    @endforeach
+                                                </select>
+                                            @endif
+                                        </div>
+                                        <div class="col-sm-8 offset-2 mt-1">
                                             <?php
                                         if (isset($record->id) && $record->id != 0) { ?>
                                             <label for="">Logo image</label>
