@@ -59,7 +59,7 @@ endpoints:
         name: image
         description: 'The Image Url of seller.'
         required: false
-        example: dolor
+        example: et
         type: string
         custom: []
     responses:

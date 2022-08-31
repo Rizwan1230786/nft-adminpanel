@@ -15,6 +15,7 @@ use App\Http\Controllers\admin\SellersController;
 use App\Http\Controllers\admin\LanguageController;
 use App\Http\Controllers\admin\blog\BlogController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\nft\ItemsController;
 use App\Http\Controllers\admin\NfcRequestController;
 use App\Http\Controllers\admin\permissionController;
 use App\Http\Controllers\admin\AuthenticationController;
@@ -133,6 +134,15 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::post('/collection/update/{id}',[CollectionsController::class,'update'])->name('collection-update');
         Route::post('/collection/delete/{id}', [CollectionsController::class, 'destory'])->name('collection-delete');
         Route::get('/collection/status', [CollectionsController::class, 'status'])->name('collection-status');
+        ////////route of creat-item /////////////////
+        Route::get('/item/list',[ItemsController::class,'index'])->name('item');
+        Route::get('/item-create',[ItemsController::class,'create'])->name('create-item');
+        Route::post('/item/add',[ItemsController::class,'submit'])->name('item-add');
+        Route::get('/edit/item/{id}', [ItemsController::class, 'edit'])->name('form-item-edit');
+        Route::post('/item/update/{id}',[ItemsController::class,'update'])->name('item-update');
+        Route::post('/item/delete/{id}', [ItemsController::class, 'destory'])->name('item-delete');
+        Route::get('/item/status', [ItemsController::class, 'status'])->name('item-status');
+
 
     });
 });

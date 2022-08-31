@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Allset</title>
+    <title>Nfts</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset("vendor/scribe/css/theme-default.style.css") }}" media="screen">
-    <link rel="stylesheet" href="{{ asset("vendor/scribe/css/theme-default.print.css") }}" media="print">
+    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.style.css") }}" media="screen">
+    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.print.css") }}" media="print">
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 
@@ -30,9 +30,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="{{ asset("vendor/scribe/js/tryitout-3.24.1.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/tryitout-3.37.0.js") }}"></script>
 
-    <script src="{{ asset("vendor/scribe/js/theme-default-3.24.1.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/theme-default-3.37.0.js") }}"></script>
 
 </head>
 
@@ -41,7 +41,7 @@
 <a href="#" id="nav-button">
     <span>
         MENU
-        <img src="{{ asset("vendor/scribe/images/navbar.png") }}" alt="navbar-image" />
+        <img src="{{ asset("/vendor/scribe/images/navbar.png") }}" alt="navbar-image" />
     </span>
 </a>
 <div class="tocify-wrapper">
@@ -70,56 +70,6 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
-                </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-seller-change-password">
-                        <a href="#endpoints-POSTapi-seller-change-password">POST api/seller/change-password</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-payment-history">
-                        <a href="#endpoints-GETapi-payment-history">GET api/payment-history</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-customer-login">
-                        <a href="#endpoints-POSTapi-customer-customer-login">Customer Login</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-send-otp-code">
-                        <a href="#endpoints-POSTapi-customer-send-otp-code">Send OTP Code</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-get-link-detail">
-                        <a href="#endpoints-POSTapi-customer-get-link-detail">Get Link Detail</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-customer_order">
-                        <a href="#endpoints-POSTapi-customer-customer_order">POST api/customer/customer_order</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-migrate">
-                        <a href="#endpoints-GETapi-migrate">GET api/migrate</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="seller-links">
-                    <a href="#seller-links">Seller Links</a>
-                </li>
-                                    <ul id="tocify-subheader-seller-links" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-create-link">
-                        <a href="#seller-links-POSTapi-seller-create-link">Create or Update Seller Links</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="seller-links-GETapi-seller-get-links-list">
-                        <a href="#seller-links-GETapi-seller-get-links-list">Get Seller Links List</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-attach-product-with-links">
-                        <a href="#seller-links-POSTapi-seller-attach-product-with-links">Attach Product With Links</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-delete-service-from-link">
-                        <a href="#seller-links-POSTapi-seller-delete-service-from-link">Delete Services From Link</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-delete-seller-link">
-                        <a href="#seller-links-POSTapi-seller-delete-seller-link">Delete Seller Link</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="barber-profile-app">
                     <a href="#barber-profile-app">Barber profile app</a>
                 </li>
@@ -138,7 +88,17 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-5" class="tocify-header">
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="front-app">
+                    <a href="#front-app">front app</a>
+                </li>
+                                    <ul id="tocify-subheader-front-app" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="front-app-GETapi-index">
+                        <a href="#front-app-GETapi-index">APIs endpoints for managing frontpage</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="customer-app">
                     <a href="#customer-app">Customer app</a>
                 </li>
@@ -148,6 +108,34 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="customer-app-POSTapi-customer-profile-update">
                         <a href="#customer-app-POSTapi-customer-profile-update">POST api/customer/profile/update</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-5" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-seller-change-password">
+                        <a href="#endpoints-POSTapi-seller-change-password">POST api/seller/change-password</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-payment-history">
+                        <a href="#endpoints-GETapi-payment-history">GET api/payment-history</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-customer-login">
+                        <a href="#endpoints-POSTapi-customer-customer-login">POST api/customer/customer-login</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-customer_order">
+                        <a href="#endpoints-POSTapi-customer-customer_order">POST api/customer/customer_order</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-migrate">
+                        <a href="#endpoints-GETapi-migrate">GET api/migrate</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-customer-register">
+                        <a href="#endpoints-POSTapi-customer-customer-register">Customer Login</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-customer-create-items">
+                        <a href="#endpoints-POSTapi-customer-create-items">POST api/customer/create-items</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -175,6 +163,28 @@
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-8" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="seller-links">
+                    <a href="#seller-links">Seller Links</a>
+                </li>
+                                    <ul id="tocify-subheader-seller-links" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-create-link">
+                        <a href="#seller-links-POSTapi-seller-create-link">Create or Update Seller Links</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="seller-links-GETapi-seller-get-links-list">
+                        <a href="#seller-links-GETapi-seller-get-links-list">Get Seller Links List</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-attach-product-with-links">
+                        <a href="#seller-links-POSTapi-seller-attach-product-with-links">Attach Product With Links</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-delete-service-from-link">
+                        <a href="#seller-links-POSTapi-seller-delete-service-from-link">Delete Services From Link</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="seller-links-POSTapi-seller-delete-seller-link">
+                        <a href="#seller-links-POSTapi-seller-delete-seller-link">Delete Seller Link</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-9" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="seller-profile-app">
                     <a href="#seller-profile-app">Seller Profile app</a>
                 </li>
@@ -193,7 +203,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-9" class="tocify-header">
+                    <ul id="tocify-header-10" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="services-app">
                     <a href="#services-app">Services app</a>
                 </li>
@@ -209,13 +219,16 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-10" class="tocify-header">
+                    <ul id="tocify-header-11" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="webpages-app">
                     <a href="#webpages-app">Webpages app</a>
                 </li>
                                     <ul id="tocify-subheader-webpages-app" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="webpages-app-GETapi-webpages_show">
                         <a href="#webpages-app-GETapi-webpages_show">GET api/webpages_show</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="webpages-app-GETapi-webpages_show--provider-">
+                        <a href="#webpages-app-GETapi-webpages_show--provider-">GET api/webpages_show/{provider}</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -229,7 +242,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 16 2022</li>
+        <li>Last updated: August 29 2022</li>
     </ul>
 </div>
 
@@ -249,1574 +262,6 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
-
-    
-
-            <h2 id="endpoints-POSTapi-seller-change-password">POST api/seller/change-password</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-seller-change-password">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/change-password" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"old_password\": \"et\",
-    \"new_password\": \"iure\",
-    \"confirm_password\": \"sapiente\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/change-password"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "old_password": "et",
-    "new_password": "iure",
-    "confirm_password": "sapiente"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-seller-change-password">
-</span>
-<span id="execution-results-POSTapi-seller-change-password" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-seller-change-password"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-seller-change-password"></code></pre>
-</span>
-<span id="execution-error-POSTapi-seller-change-password" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-seller-change-password"></code></pre>
-</span>
-<form id="form-POSTapi-seller-change-password" data-method="POST"
-      data-path="api/seller/change-password"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-change-password', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-seller-change-password"
-                    onclick="tryItOut('POSTapi-seller-change-password');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-seller-change-password"
-                    onclick="cancelTryOut('POSTapi-seller-change-password');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-seller-change-password" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/seller/change-password</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>old_password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="old_password"
-               data-endpoint="POSTapi-seller-change-password"
-               value="et"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>new_password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="new_password"
-               data-endpoint="POSTapi-seller-change-password"
-               value="iure"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>confirm_password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="confirm_password"
-               data-endpoint="POSTapi-seller-change-password"
-               value="sapiente"
-               data-component="body" hidden>
-    <br>
-<p>validation.same.</p>
-        </p>
-        </form>
-
-            <h2 id="endpoints-GETapi-payment-history">GET api/payment-history</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-payment-history">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/payment-history" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/payment-history"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-payment-history">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;object&quot;: &quot;list&quot;,
-    &quot;data&quot;: [],
-    &quot;has_more&quot;: false,
-    &quot;url&quot;: &quot;/v1/issuing/transactions&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-payment-history" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-payment-history"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-payment-history"></code></pre>
-</span>
-<span id="execution-error-GETapi-payment-history" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-payment-history"></code></pre>
-</span>
-<form id="form-GETapi-payment-history" data-method="GET"
-      data-path="api/payment-history"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-payment-history', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-payment-history"
-                    onclick="tryItOut('GETapi-payment-history');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-payment-history"
-                    onclick="cancelTryOut('GETapi-payment-history');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-payment-history" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/payment-history</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-POSTapi-customer-customer-login">Customer Login</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-customer-customer-login">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/customer/customer-login" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"abc@gmail.com\",
-    \"macaddress\": \"96-D5-9E-67-40-AB\",
-    \"otp\": \"123456\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/customer-login"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "abc@gmail.com",
-    "macaddress": "96-D5-9E-67-40-AB",
-    "otp": "123456"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-customer-customer-login">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string,
-  &quot;data&quot;: {
-     &quot;id&quot;: integer/null,
-     &quot;firstname&quot;: string/null,
-     &quot;lastname&quot;: string/null,
-     &quot;email&quot;: string/null,
-     &quot;phoneno&quot;: string/null,
-     &quot;dob&quot;: string/null
-  },
-  &quot;access_token&quot;: string/null,
-  &quot;token_type&quot;: string/null
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-customer-customer-login" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-customer-customer-login"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-customer-customer-login"></code></pre>
-</span>
-<span id="execution-error-POSTapi-customer-customer-login" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-customer-customer-login"></code></pre>
-</span>
-<form id="form-POSTapi-customer-customer-login" data-method="POST"
-      data-path="api/customer/customer-login"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-customer-login', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-customer-customer-login"
-                    onclick="tryItOut('POSTapi-customer-customer-login');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-customer-customer-login"
-                    onclick="cancelTryOut('POSTapi-customer-customer-login');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-customer-customer-login" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/customer/customer-login</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-customer-customer-login"
-               value="abc@gmail.com"
-               data-component="body" hidden>
-    <br>
-<p>Email address of customer.</p>
-        </p>
-                <p>
-            <b><code>macaddress</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="macaddress"
-               data-endpoint="POSTapi-customer-customer-login"
-               value="96-D5-9E-67-40-AB"
-               data-component="body" hidden>
-    <br>
-<p>Mac Address of customer device.</p>
-        </p>
-                <p>
-            <b><code>otp</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="otp"
-               data-endpoint="POSTapi-customer-customer-login"
-               value="123456"
-               data-component="body" hidden>
-    <br>
-<p>OTP code against the customer device.</p>
-        </p>
-        </form>
-
-            <h2 id="endpoints-POSTapi-customer-send-otp-code">Send OTP Code</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-customer-send-otp-code">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/customer/send-otp-code" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"abc@gmail.com\",
-    \"macaddress\": \"96-D5-9E-67-40-AB\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/send-otp-code"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "abc@gmail.com",
-    "macaddress": "96-D5-9E-67-40-AB"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-customer-send-otp-code">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string/null,
-  &quot;deviceVerified&quot;: true/false,
-  &quot;data&quot;: {
-      &quot;id&quot;: integer/null,
-      &quot;firstname&quot;: string/null,
-      &quot;lastname&quot;: string/null,
-      &quot;email&quot;: string/null,
-      &quot;phoneno&quot;: string/null,
-      &quot;dob&quot;: string/null
-  },
-  &quot;access_token&quot;: string/null,
-  &quot;token_type&quot;: string/null
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-customer-send-otp-code" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-customer-send-otp-code"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-customer-send-otp-code"></code></pre>
-</span>
-<span id="execution-error-POSTapi-customer-send-otp-code" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-customer-send-otp-code"></code></pre>
-</span>
-<form id="form-POSTapi-customer-send-otp-code" data-method="POST"
-      data-path="api/customer/send-otp-code"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-send-otp-code', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-customer-send-otp-code"
-                    onclick="tryItOut('POSTapi-customer-send-otp-code');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-customer-send-otp-code"
-                    onclick="cancelTryOut('POSTapi-customer-send-otp-code');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-customer-send-otp-code" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/customer/send-otp-code</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-customer-send-otp-code"
-               value="abc@gmail.com"
-               data-component="body" hidden>
-    <br>
-<p>Email address of customer.</p>
-        </p>
-                <p>
-            <b><code>macaddress</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="macaddress"
-               data-endpoint="POSTapi-customer-send-otp-code"
-               value="96-D5-9E-67-40-AB"
-               data-component="body" hidden>
-    <br>
-<p>Mac Address of customer device.</p>
-        </p>
-        </form>
-
-            <h2 id="endpoints-POSTapi-customer-get-link-detail">Get Link Detail</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-customer-get-link-detail">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/customer/get-link-detail" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"link\": \"xu\",
-    \"LinkId\": \"{\\\"linkId\\\": 1,\\\"service\\\": [{\\\"id\\\": 1},{\\\"id\\\": 2},{\\\"id\\\": 3}]}\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/get-link-detail"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "link": "xu",
-    "LinkId": "{\"linkId\": 1,\"service\": [{\"id\": 1},{\"id\": 2},{\"id\": 3}]}"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-customer-get-link-detail">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string,
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-customer-get-link-detail" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-customer-get-link-detail"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-customer-get-link-detail"></code></pre>
-</span>
-<span id="execution-error-POSTapi-customer-get-link-detail" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-customer-get-link-detail"></code></pre>
-</span>
-<form id="form-POSTapi-customer-get-link-detail" data-method="POST"
-      data-path="api/customer/get-link-detail"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-get-link-detail', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-customer-get-link-detail"
-                    onclick="tryItOut('POSTapi-customer-get-link-detail');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-customer-get-link-detail"
-                    onclick="cancelTryOut('POSTapi-customer-get-link-detail');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-customer-get-link-detail" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/customer/get-link-detail</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="link"
-               data-endpoint="POSTapi-customer-get-link-detail"
-               value="xu"
-               data-component="body" hidden>
-    <br>
-<p>validation.min.</p>
-        </p>
-                <p>
-            <b><code>LinkId</code></b>&nbsp;&nbsp;<small>and</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="LinkId"
-               data-endpoint="POSTapi-customer-get-link-detail"
-               value="{"linkId": 1,"service": [{"id": 1},{"id": 2},{"id": 3}]}"
-               data-component="body" hidden>
-    <br>
-<p>service parameter are required. Service should be array type and each row should be exist on id.</p>
-        </p>
-        </form>
-
-            <h2 id="endpoints-POSTapi-customer-customer_order">POST api/customer/customer_order</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-customer-customer_order">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/customer/customer_order" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"amount\": \"excepturi\",
-    \"email\": \"parisian.ashlee@example.com\",
-    \"firstname\": \"dolorum\",
-    \"lastname\": \"dolore\",
-    \"phoneno\": \"vero\",
-    \"card_number\": \"sed\",
-    \"expiry_date\": \"et\",
-    \"cvc\": \"dolor\",
-    \"zip_code\": \"aut\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/customer_order"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "amount": "excepturi",
-    "email": "parisian.ashlee@example.com",
-    "firstname": "dolorum",
-    "lastname": "dolore",
-    "phoneno": "vero",
-    "card_number": "sed",
-    "expiry_date": "et",
-    "cvc": "dolor",
-    "zip_code": "aut"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-customer-customer_order">
-</span>
-<span id="execution-results-POSTapi-customer-customer_order" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-customer-customer_order"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-customer-customer_order"></code></pre>
-</span>
-<span id="execution-error-POSTapi-customer-customer_order" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-customer-customer_order"></code></pre>
-</span>
-<form id="form-POSTapi-customer-customer_order" data-method="POST"
-      data-path="api/customer/customer_order"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-customer_order', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-customer-customer_order"
-                    onclick="tryItOut('POSTapi-customer-customer_order');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-customer-customer_order"
-                    onclick="cancelTryOut('POSTapi-customer-customer_order');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-customer-customer_order" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/customer/customer_order</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>amount</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="amount"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="excepturi"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="parisian.ashlee@example.com"
-               data-component="body" hidden>
-    <br>
-<p>validation.email.</p>
-        </p>
-                <p>
-            <b><code>firstname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="firstname"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="dolorum"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>lastname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="lastname"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="dolore"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>phoneno</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="phoneno"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="vero"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>card_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="card_number"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="sed"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>expiry_date</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="expiry_date"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="et"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>cvc</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="cvc"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="dolor"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>zip_code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="zip_code"
-               data-endpoint="POSTapi-customer-customer_order"
-               value="aut"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-        </form>
-
-            <h2 id="endpoints-GETapi-migrate">GET api/migrate</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-migrate">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/migrate" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/migrate"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-migrate">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json"></code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-migrate" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-migrate"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-migrate"></code></pre>
-</span>
-<span id="execution-error-GETapi-migrate" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-migrate"></code></pre>
-</span>
-<form id="form-GETapi-migrate" data-method="GET"
-      data-path="api/migrate"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-migrate', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-migrate"
-                    onclick="tryItOut('GETapi-migrate');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-migrate"
-                    onclick="cancelTryOut('GETapi-migrate');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-migrate" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/migrate</code></b>
-        </p>
-                    </form>
-
-        <h1 id="seller-links">Seller Links</h1>
-
-    <p>APIs endpoints for managing seller</p>
-
-            <h2 id="seller-links-POSTapi-seller-create-link">Create or Update Seller Links</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-seller-create-link">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/create-link" \
-    --header "Content-Type: multipart/form-data" \
-    --header "Accept: application/json" \
-    --form "fullName=kttyedeecuetxwfxelxwmrfxufgzsjfwffeaeccqyhjaplgzxxnjndhcouzgabbebcfudtadnquqwxqlmwnmjvrxcjqpvlelqkfrzrirhkrmmsxqrpglaokliwadgngwkmqwjwmhcafaxeolmmjsfzvblwcogjiihv" \
-    --form "displayName=ahrkeiqoensdbvuokytouvum" \
-    --form "link=nobis" \
-    --form "updateId=474.85285" \
-    --form "image=@C:\Users\umar7\AppData\Local\Temp\phpE481.tmp" </code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/create-link"
-);
-
-const headers = {
-    "Content-Type": "multipart/form-data",
-    "Accept": "application/json",
-};
-
-const body = new FormData();
-body.append('fullName', 'kttyedeecuetxwfxelxwmrfxufgzsjfwffeaeccqyhjaplgzxxnjndhcouzgabbebcfudtadnquqwxqlmwnmjvrxcjqpvlelqkfrzrirhkrmmsxqrpglaokliwadgngwkmqwjwmhcafaxeolmmjsfzvblwcogjiihv');
-body.append('displayName', 'ahrkeiqoensdbvuokytouvum');
-body.append('link', 'nobis');
-body.append('updateId', '474.85285');
-body.append('image', document.querySelector('input[name="image"]').files[0]);
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-seller-create-link">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string,
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-seller-create-link" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-seller-create-link"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-seller-create-link"></code></pre>
-</span>
-<span id="execution-error-POSTapi-seller-create-link" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-seller-create-link"></code></pre>
-</span>
-<form id="form-POSTapi-seller-create-link" data-method="POST"
-      data-path="api/seller/create-link"
-      data-authed="0"
-      data-hasfiles="1"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-create-link', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-seller-create-link"
-                    onclick="tryItOut('POSTapi-seller-create-link');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-seller-create-link"
-                    onclick="cancelTryOut('POSTapi-seller-create-link');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-seller-create-link" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/seller/create-link</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>fullName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="fullName"
-               data-endpoint="POSTapi-seller-create-link"
-               value="kttyedeecuetxwfxelxwmrfxufgzsjfwffeaeccqyhjaplgzxxnjndhcouzgabbebcfudtadnquqwxqlmwnmjvrxcjqpvlelqkfrzrirhkrmmsxqrpglaokliwadgngwkmqwjwmhcafaxeolmmjsfzvblwcogjiihv"
-               data-component="body" hidden>
-    <br>
-<p>validation.min validation.max.</p>
-        </p>
-                <p>
-            <b><code>displayName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="displayName"
-               data-endpoint="POSTapi-seller-create-link"
-               value="ahrkeiqoensdbvuokytouvum"
-               data-component="body" hidden>
-    <br>
-<p>validation.min validation.max.</p>
-        </p>
-                <p>
-            <b><code>link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="link"
-               data-endpoint="POSTapi-seller-create-link"
-               value="nobis"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>image</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
-                <input type="file"
-               name="image"
-               data-endpoint="POSTapi-seller-create-link"
-               value=""
-               data-component="body" hidden>
-    <br>
-<p>Seller profile picture.</p>
-        </p>
-                <p>
-            <b><code>updateId</code></b>&nbsp;&nbsp;<small>number</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="updateId"
-               data-endpoint="POSTapi-seller-create-link"
-               value="474.85285"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-        </form>
-
-            <h2 id="seller-links-GETapi-seller-get-links-list">Get Seller Links List</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-seller-get-links-list">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/seller/get-links-list" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"page\": \"1\",
-    \"limit\": \"20\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/get-links-list"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "page": "1",
-    "limit": "20"
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-seller-get-links-list">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string/null,
-  &quot;data&quot;: [
-  {
-      &quot;id&quot;: number/null,
-      &quot;link&quot;: string/null,
-      &quot;fullname&quot;: string/null,
-      &quot;displayname&quot;: string/null,
-      &quot;image&quot;: string/null,
-      &quot;services&quot;: [
-          {
-              &quot;linkServiceId&quot;: number/null,
-              &quot;serviceId&quot;: number/null,
-              &quot;name&quot;: string/null,
-              &quot;price&quot;: string/null
-          }
-      ]
- }
- ],
-  &quot;nextPage&quot;: true/false,
-  &quot;limit&quot;: number/20
- }</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-seller-get-links-list" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-seller-get-links-list"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-seller-get-links-list"></code></pre>
-</span>
-<span id="execution-error-GETapi-seller-get-links-list" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-seller-get-links-list"></code></pre>
-</span>
-<form id="form-GETapi-seller-get-links-list" data-method="GET"
-      data-path="api/seller/get-links-list"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-seller-get-links-list', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-seller-get-links-list"
-                    onclick="tryItOut('GETapi-seller-get-links-list');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-seller-get-links-list"
-                    onclick="cancelTryOut('GETapi-seller-get-links-list');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-seller-get-links-list" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/seller/get-links-list</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>page</code></b>&nbsp;&nbsp;<small>Its</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="page"
-               data-endpoint="GETapi-seller-get-links-list"
-               value="1"
-               data-component="body" hidden>
-    <br>
-<p>an optional, by default its consider as 1.</p>
-        </p>
-                <p>
-            <b><code>limit</code></b>&nbsp;&nbsp;<small>Its</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="limit"
-               data-endpoint="GETapi-seller-get-links-list"
-               value="20"
-               data-component="body" hidden>
-    <br>
-<p>an optional, by default its consider as 20.</p>
-        </p>
-        </form>
-
-            <h2 id="seller-links-POSTapi-seller-attach-product-with-links">Attach Product With Links</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-seller-attach-product-with-links">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/attach-product-with-links" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"LinkId\": \"{\\\"linkId\\\": 1,\\\"service\\\": [{\\\"id\\\": 1},{\\\"id\\\": 2},{\\\"id\\\": 3}]}\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/attach-product-with-links"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "LinkId": "{\"linkId\": 1,\"service\": [{\"id\": 1},{\"id\": 2},{\"id\": 3}]}"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-seller-attach-product-with-links">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string,
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-seller-attach-product-with-links" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-seller-attach-product-with-links"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-seller-attach-product-with-links"></code></pre>
-</span>
-<span id="execution-error-POSTapi-seller-attach-product-with-links" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-seller-attach-product-with-links"></code></pre>
-</span>
-<form id="form-POSTapi-seller-attach-product-with-links" data-method="POST"
-      data-path="api/seller/attach-product-with-links"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-attach-product-with-links', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-seller-attach-product-with-links"
-                    onclick="tryItOut('POSTapi-seller-attach-product-with-links');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-seller-attach-product-with-links"
-                    onclick="cancelTryOut('POSTapi-seller-attach-product-with-links');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-seller-attach-product-with-links" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/seller/attach-product-with-links</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>LinkId</code></b>&nbsp;&nbsp;<small>and</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="LinkId"
-               data-endpoint="POSTapi-seller-attach-product-with-links"
-               value="{"linkId": 1,"service": [{"id": 1},{"id": 2},{"id": 3}]}"
-               data-component="body" hidden>
-    <br>
-<p>service parameter are required. Service should be array type and each row should be exist on id parameter.</p>
-        </p>
-        </form>
-
-            <h2 id="seller-links-POSTapi-seller-delete-service-from-link">Delete Services From Link</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-seller-delete-service-from-link">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/delete-service-from-link" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"linkId\": 68149210.3515423,
-    \"service\": [
-        {
-            \"id\": \"occaecati\"
-        }
-    ],
-    \"LinkId\": \"{\\\"linkId\\\": 1,\\\"service\\\": [{\\\"id\\\": 1},{\\\"id\\\": 2},{\\\"id\\\": 3}]}\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/delete-service-from-link"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "linkId": 68149210.3515423,
-    "service": [
-        {
-            "id": "occaecati"
-        }
-    ],
-    "LinkId": "{\"linkId\": 1,\"service\": [{\"id\": 1},{\"id\": 2},{\"id\": 3}]}"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-seller-delete-service-from-link">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string,
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-seller-delete-service-from-link" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-seller-delete-service-from-link"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-seller-delete-service-from-link"></code></pre>
-</span>
-<span id="execution-error-POSTapi-seller-delete-service-from-link" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-seller-delete-service-from-link"></code></pre>
-</span>
-<form id="form-POSTapi-seller-delete-service-from-link" data-method="POST"
-      data-path="api/seller/delete-service-from-link"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-delete-service-from-link', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-seller-delete-service-from-link"
-                    onclick="tryItOut('POSTapi-seller-delete-service-from-link');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-seller-delete-service-from-link"
-                    onclick="cancelTryOut('POSTapi-seller-delete-service-from-link');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-seller-delete-service-from-link" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/seller/delete-service-from-link</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>linkId</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
-                <input type="number"
-               name="linkId"
-               data-endpoint="POSTapi-seller-delete-service-from-link"
-               value="68149210.351542"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-        <details>
-            <summary style="padding-bottom: 10px;">
-                <b><code>service</code></b>&nbsp;&nbsp;<small>object[]</small>     <i>optional</i> &nbsp;
-<br>
-
-            </summary>
-                                                <p>
-                        <b><code>service[].id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="service.0.id"
-               data-endpoint="POSTapi-seller-delete-service-from-link"
-               value="occaecati"
-               data-component="body" hidden>
-    <br>
-
-                    </p>
-                                    </details>
-        </p>
-                <p>
-            <b><code>LinkId</code></b>&nbsp;&nbsp;<small>and</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="LinkId"
-               data-endpoint="POSTapi-seller-delete-service-from-link"
-               value="{"linkId": 1,"service": [{"id": 1},{"id": 2},{"id": 3}]}"
-               data-component="body" hidden>
-    <br>
-<p>service parameter are required. Service should be array type and each row should be exist on id.</p>
-        </p>
-        </form>
-
-            <h2 id="seller-links-POSTapi-seller-delete-seller-link">Delete Seller Link</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-seller-delete-seller-link">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/delete-seller-link" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"linkId\": \"1\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/delete-seller-link"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "linkId": "1"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-seller-delete-seller-link">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;status&quot;: true/false,
-  &quot;message&quot;: string
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-seller-delete-seller-link" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-seller-delete-seller-link"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-seller-delete-seller-link"></code></pre>
-</span>
-<span id="execution-error-POSTapi-seller-delete-seller-link" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-seller-delete-seller-link"></code></pre>
-</span>
-<form id="form-POSTapi-seller-delete-seller-link" data-method="POST"
-      data-path="api/seller/delete-seller-link"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-delete-seller-link', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-seller-delete-seller-link"
-                    onclick="tryItOut('POSTapi-seller-delete-seller-link');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-seller-delete-seller-link"
-                    onclick="cancelTryOut('POSTapi-seller-delete-seller-link');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-seller-delete-seller-link" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/seller/delete-seller-link</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>linkId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="linkId"
-               data-endpoint="POSTapi-seller-delete-seller-link"
-               value="1"
-               data-component="body" hidden>
-    <br>
-<p>Full name of the Seller.</p>
-        </p>
-        </form>
-
         <h1 id="barber-profile-app">Barber profile app</h1>
 
     <p>APIs endpoints for managing barber profile</p>
@@ -1834,14 +279,21 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/social-link" \
+    "https://admin.nftpoint.io/api/seller/social-link" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"facebook_link\": \"voluptas\",
+    \"instagram_link\": \"id\",
+    \"tiktok_link\": \"similique\",
+    \"twitter_link\": \"ut\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/social-link"
+    "https://admin.nftpoint.io/api/seller/social-link"
 );
 
 const headers = {
@@ -1849,9 +301,17 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "facebook_link": "voluptas",
+    "instagram_link": "id",
+    "tiktok_link": "similique",
+    "twitter_link": "ut"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -1897,7 +357,48 @@ fetch(url, {
             <small class="badge badge-black">POST</small>
             <b><code>api/seller/social-link</code></b>
         </p>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>facebook_link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="facebook_link"
+               data-endpoint="POSTapi-seller-social-link"
+               value="voluptas"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>instagram_link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="instagram_link"
+               data-endpoint="POSTapi-seller-social-link"
+               value="id"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>tiktok_link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="tiktok_link"
+               data-endpoint="POSTapi-seller-social-link"
+               value="similique"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>twitter_link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="twitter_link"
+               data-endpoint="POSTapi-seller-social-link"
+               value="ut"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
 
             <h2 id="barber-profile-app-GETapi-seller-profile-show">GET api/seller/profile-show</h2>
 
@@ -1912,14 +413,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/seller/profile-show" \
+    --get "https://admin.nftpoint.io/api/seller/profile-show" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/profile-show"
+    "https://admin.nftpoint.io/api/seller/profile-show"
 );
 
 const headers = {
@@ -2007,14 +508,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/seller/get-profile-data" \
+    --get "https://admin.nftpoint.io/api/seller/get-profile-data" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/get-profile-data"
+    "https://admin.nftpoint.io/api/seller/get-profile-data"
 );
 
 const headers = {
@@ -2102,14 +603,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/update_profile_data" \
+    "https://admin.nftpoint.io/api/seller/update_profile_data" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/update_profile_data"
+    "https://admin.nftpoint.io/api/seller/update_profile_data"
 );
 
 const headers = {
@@ -2167,6 +668,150 @@ fetch(url, {
         </p>
                     </form>
 
+        <h1 id="front-app">front app</h1>
+
+    
+
+            <h2 id="front-app-GETapi-index">APIs endpoints for managing frontpage</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://admin.nftpoint.io/api/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;status&quot;: true,
+    &quot;customer&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;firstname&quot;: &quot;ahmed&quot;,
+            &quot;lastname&quot;: &quot;ali rana&quot;,
+            &quot;email&quot;: &quot;admin123@gmail.com&quot;,
+            &quot;phoneno&quot;: &quot;+00000000000&quot;,
+            &quot;dob&quot;: &quot;11-9-1998&quot;,
+            &quot;image&quot;: &quot;http://admin.nftpoint.io/uploads/seller-profile&quot;,
+            &quot;is_verified&quot;: null,
+            &quot;is_deleted&quot;: null,
+            &quot;created_at&quot;: &quot;2022-08-25T10:34:09.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-25T10:34:09.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;firstname&quot;: &quot;rizwan1&quot;,
+            &quot;lastname&quot;: &quot;akhtar&quot;,
+            &quot;email&quot;: &quot;admin@gmail.com&quot;,
+            &quot;phoneno&quot;: &quot;03047122971&quot;,
+            &quot;dob&quot;: &quot;11-9-1998&quot;,
+            &quot;image&quot;: &quot;http://admin.nftpoint.io/uploads/seller-profile/1661419603.png&quot;,
+            &quot;is_verified&quot;: &quot;1&quot;,
+            &quot;is_deleted&quot;: &quot;0&quot;,
+            &quot;created_at&quot;: &quot;2022-08-25T07:00:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-25T09:26:43.000000Z&quot;
+        }
+    ],
+    &quot;app_setting&quot;: {
+        &quot;id&quot;: 1,
+        &quot;header_logo&quot;: &quot;http://admin.nftpoint.io/setting/header/R.png&quot;,
+        &quot;favicon_image&quot;: &quot;http://admin.nftpoint.io/setting/header/1655267289_6417e6b1da42ff0be4b2.png&quot;,
+        &quot;website_logo&quot;: &quot;http://admin.nftpoint.io/setting/header/1661238992R.png&quot;,
+        &quot;header_bg_img&quot;: &quot;http://admin.nftpoint.io/setting/header/1661239383header.png&quot;,
+        &quot;footer_bg_img&quot;: &quot;http://admin.nftpoint.io/setting/header/16612395371655382940_681b42aa9daebb9d91f9.jpg&quot;,
+        &quot;application_title&quot;: &quot;Nfts&quot;,
+        &quot;address&quot;: &quot;Saad media&quot;,
+        &quot;email_address&quot;: &quot;socail@demo.com&quot;,
+        &quot;contact&quot;: &quot;0000000000&quot;,
+        &quot;footer_detail&quot;: &quot;Saad Media All right Reserve&quot;,
+        &quot;created_at&quot;: &quot;2022-08-23T06:58:00.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-08-23T07:28:15.000000Z&quot;
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-index"></code></pre>
+</span>
+<span id="execution-error-GETapi-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-index"></code></pre>
+</span>
+<form id="form-GETapi-index" data-method="GET"
+      data-path="api/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-index"
+                    onclick="tryItOut('GETapi-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-index"
+                    onclick="cancelTryOut('GETapi-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-index" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/index</code></b>
+        </p>
+                    </form>
+
         <h1 id="customer-app">Customer app</h1>
 
     <p>APIs endpoints for managing customer registration updation and login using otp</p>
@@ -2184,14 +829,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/customer/profile" \
+    --get "https://admin.nftpoint.io/api/customer/profile" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/profile"
+    "https://admin.nftpoint.io/api/customer/profile"
 );
 
 const headers = {
@@ -2279,14 +924,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/customer/profile/update" \
+    "https://admin.nftpoint.io/api/customer/profile/update" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/customer/profile/update"
+    "https://admin.nftpoint.io/api/customer/profile/update"
 );
 
 const headers = {
@@ -2344,6 +989,1419 @@ fetch(url, {
         </p>
                     </form>
 
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+            <h2 id="endpoints-POSTapi-seller-change-password">POST api/seller/change-password</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-seller-change-password">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/seller/change-password" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"old_password\": \"iure\",
+    \"new_password\": \"eaque\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/change-password"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "old_password": "iure",
+    "new_password": "eaque"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-seller-change-password">
+</span>
+<span id="execution-results-POSTapi-seller-change-password" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-seller-change-password"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-seller-change-password"></code></pre>
+</span>
+<span id="execution-error-POSTapi-seller-change-password" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-seller-change-password"></code></pre>
+</span>
+<form id="form-POSTapi-seller-change-password" data-method="POST"
+      data-path="api/seller/change-password"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-change-password', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-seller-change-password"
+                    onclick="tryItOut('POSTapi-seller-change-password');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-seller-change-password"
+                    onclick="cancelTryOut('POSTapi-seller-change-password');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-seller-change-password" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/seller/change-password</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>old_password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="old_password"
+               data-endpoint="POSTapi-seller-change-password"
+               value="iure"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>new_password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="new_password"
+               data-endpoint="POSTapi-seller-change-password"
+               value="eaque"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-payment-history">GET api/payment-history</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-payment-history">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://admin.nftpoint.io/api/payment-history" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/payment-history"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-payment-history">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;object&quot;: &quot;list&quot;,
+    &quot;data&quot;: [],
+    &quot;has_more&quot;: false,
+    &quot;url&quot;: &quot;/v1/issuing/transactions&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-payment-history" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-payment-history"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-payment-history"></code></pre>
+</span>
+<span id="execution-error-GETapi-payment-history" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-payment-history"></code></pre>
+</span>
+<form id="form-GETapi-payment-history" data-method="GET"
+      data-path="api/payment-history"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-payment-history', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-payment-history"
+                    onclick="tryItOut('GETapi-payment-history');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-payment-history"
+                    onclick="cancelTryOut('GETapi-payment-history');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-payment-history" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/payment-history</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-customer-customer-login">POST api/customer/customer-login</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-customer-customer-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/customer/customer-login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"goyette.glenda@example.com\",
+    \"password\": \"\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/customer/customer-login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "goyette.glenda@example.com",
+    "password": ""
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-customer-customer-login">
+</span>
+<span id="execution-results-POSTapi-customer-customer-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-customer-customer-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-customer-customer-login"></code></pre>
+</span>
+<span id="execution-error-POSTapi-customer-customer-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-customer-customer-login"></code></pre>
+</span>
+<form id="form-POSTapi-customer-customer-login" data-method="POST"
+      data-path="api/customer/customer-login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-customer-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-customer-customer-login"
+                    onclick="tryItOut('POSTapi-customer-customer-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-customer-customer-login"
+                    onclick="cancelTryOut('POSTapi-customer-customer-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-customer-customer-login" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/customer/customer-login</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-customer-customer-login"
+               value="goyette.glenda@example.com"
+               data-component="body" hidden>
+    <br>
+<p>validation.email.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-customer-customer-login"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>validation.min.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-POSTapi-customer-customer_order">POST api/customer/customer_order</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-customer-customer_order">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/customer/customer_order" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"amount\": \"explicabo\",
+    \"email\": \"johnny.metz@example.net\",
+    \"firstname\": \"quo\",
+    \"lastname\": \"mollitia\",
+    \"phoneno\": \"eius\",
+    \"card_number\": \"totam\",
+    \"expiry_date\": \"voluptatum\",
+    \"cvc\": \"et\",
+    \"zip_code\": \"aut\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/customer/customer_order"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "amount": "explicabo",
+    "email": "johnny.metz@example.net",
+    "firstname": "quo",
+    "lastname": "mollitia",
+    "phoneno": "eius",
+    "card_number": "totam",
+    "expiry_date": "voluptatum",
+    "cvc": "et",
+    "zip_code": "aut"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-customer-customer_order">
+</span>
+<span id="execution-results-POSTapi-customer-customer_order" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-customer-customer_order"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-customer-customer_order"></code></pre>
+</span>
+<span id="execution-error-POSTapi-customer-customer_order" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-customer-customer_order"></code></pre>
+</span>
+<form id="form-POSTapi-customer-customer_order" data-method="POST"
+      data-path="api/customer/customer_order"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-customer_order', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-customer-customer_order"
+                    onclick="tryItOut('POSTapi-customer-customer_order');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-customer-customer_order"
+                    onclick="cancelTryOut('POSTapi-customer-customer_order');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-customer-customer_order" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/customer/customer_order</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>amount</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="amount"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="explicabo"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="johnny.metz@example.net"
+               data-component="body" hidden>
+    <br>
+<p>validation.email.</p>
+        </p>
+                <p>
+            <b><code>firstname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="firstname"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="quo"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>lastname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="lastname"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="mollitia"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>phoneno</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phoneno"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="eius"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>card_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="card_number"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="totam"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>expiry_date</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="expiry_date"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="voluptatum"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>cvc</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="cvc"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="et"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>zip_code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="zip_code"
+               data-endpoint="POSTapi-customer-customer_order"
+               value="aut"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-migrate">GET api/migrate</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-migrate">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://admin.nftpoint.io/api/migrate" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/migrate"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-migrate">
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 55
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name &#039;phoneno&#039; (SQL: ALTER TABLE `sellers` ADD `phoneno` VARCHAR(191) NULL DEFAULT NULL AFTER `email`;)&quot;,
+    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
+    &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
+    &quot;line&quot;: 712,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
+            &quot;line&quot;: 672,
+            &quot;function&quot;: &quot;runQueryCallback&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
+            &quot;line&quot;: 376,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php&quot;,
+            &quot;line&quot;: 442,
+            &quot;function&quot;: &quot;select&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php&quot;,
+            &quot;line&quot;: 261,
+            &quot;function&quot;: &quot;__call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\DatabaseManager&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\app\\Http\\Controllers\\Table\\DatabaseManageController.php&quot;,
+            &quot;line&quot;: 12,
+            &quot;function&quot;: &quot;__callStatic&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\Facades\\Facade&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;Add&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Table\\DatabaseManageController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 262,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 721,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 128,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 127,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 723,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 698,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 651,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 128,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
+            &quot;line&quot;: 52,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php&quot;,
+            &quot;line&quot;: 57,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Fideloper\\Proxy\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 142,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 111,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 222,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 179,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 123,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 80,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 56,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 653,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 136,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 298,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 121,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1015,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
+            &quot;line&quot;: 94,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 129,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\xampp\\htdocs\\nft-adminpanel\\artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-migrate" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-migrate"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-migrate"></code></pre>
+</span>
+<span id="execution-error-GETapi-migrate" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-migrate"></code></pre>
+</span>
+<form id="form-GETapi-migrate" data-method="GET"
+      data-path="api/migrate"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-migrate', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-migrate"
+                    onclick="tryItOut('GETapi-migrate');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-migrate"
+                    onclick="cancelTryOut('GETapi-migrate');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-migrate" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/migrate</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-customer-customer-register">Customer Login</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-customer-customer-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/customer/customer-register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"firstname\": \"qj\",
+    \"lastname\": \"gphw\",
+    \"email\": \"abc@gmail.com\",
+    \"phoneno\": \"eaque\",
+    \"dob\": \"est\",
+    \"password\": \"123456\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/customer/customer-register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "firstname": "qj",
+    "lastname": "gphw",
+    "email": "abc@gmail.com",
+    "phoneno": "eaque",
+    "dob": "est",
+    "password": "123456"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-customer-customer-register">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string,
+  &quot;data&quot;: {
+     &quot;id&quot;: integer/null,
+     &quot;firstname&quot;: string/null,
+     &quot;lastname&quot;: string/null,
+     &quot;email&quot;: string/null,
+     &quot;phoneno&quot;: string/null,
+     &quot;dob&quot;: string/null
+  },
+  &quot;access_token&quot;: string/null,
+  &quot;token_type&quot;: string/null
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-customer-customer-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-customer-customer-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-customer-customer-register"></code></pre>
+</span>
+<span id="execution-error-POSTapi-customer-customer-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-customer-customer-register"></code></pre>
+</span>
+<form id="form-POSTapi-customer-customer-register" data-method="POST"
+      data-path="api/customer/customer-register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-customer-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-customer-customer-register"
+                    onclick="tryItOut('POSTapi-customer-customer-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-customer-customer-register"
+                    onclick="cancelTryOut('POSTapi-customer-customer-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-customer-customer-register" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/customer/customer-register</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>firstname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="firstname"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="qj"
+               data-component="body" hidden>
+    <br>
+<p>validation.min.</p>
+        </p>
+                <p>
+            <b><code>lastname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="lastname"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="gphw"
+               data-component="body" hidden>
+    <br>
+<p>validation.min.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="abc@gmail.com"
+               data-component="body" hidden>
+    <br>
+<p>Email address of customer.</p>
+        </p>
+                <p>
+            <b><code>phoneno</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phoneno"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="eaque"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>dob</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="dob"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="est"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-customer-customer-register"
+               value="123456"
+               data-component="body" hidden>
+    <br>
+<p>password the customer.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-POSTapi-customer-create-items">POST api/customer/create-items</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-customer-create-items">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/customer/create-items" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"lqpc\",
+    \"price\": \"quo\",
+    \"size\": \"est\",
+    \"image\": \"voluptatibus\",
+    \"no_of_copies\": \"consequuntur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/customer/create-items"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "lqpc",
+    "price": "quo",
+    "size": "est",
+    "image": "voluptatibus",
+    "no_of_copies": "consequuntur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-customer-create-items">
+</span>
+<span id="execution-results-POSTapi-customer-create-items" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-customer-create-items"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-customer-create-items"></code></pre>
+</span>
+<span id="execution-error-POSTapi-customer-create-items" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-customer-create-items"></code></pre>
+</span>
+<form id="form-POSTapi-customer-create-items" data-method="POST"
+      data-path="api/customer/create-items"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-customer-create-items', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-customer-create-items"
+                    onclick="tryItOut('POSTapi-customer-create-items');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-customer-create-items"
+                    onclick="cancelTryOut('POSTapi-customer-create-items');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-customer-create-items" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/customer/create-items</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-customer-create-items"
+               value="lqpc"
+               data-component="body" hidden>
+    <br>
+<p>validation.min.</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="price"
+               data-endpoint="POSTapi-customer-create-items"
+               value="quo"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>size</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="size"
+               data-endpoint="POSTapi-customer-create-items"
+               value="est"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>image</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="image"
+               data-endpoint="POSTapi-customer-create-items"
+               value="voluptatibus"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>no_of_copies</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="no_of_copies"
+               data-endpoint="POSTapi-customer-create-items"
+               value="consequuntur"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
         <h1 id="nfc-request-app">NFC request app</h1>
 
     <p>APIs endpoints for managing NFC requests</p>
@@ -2361,23 +2419,23 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/nfcrequest" \
+    "https://admin.nftpoint.io/api/nfcrequest" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"itaque\",
-    \"email\": \"odio\",
-    \"contact\": \"reprehenderit\",
-    \"detail\": \"dolor\",
-    \"shop_name\": \"reiciendis\",
-    \"address\": \"officiis\"
+    \"name\": \"autem\",
+    \"email\": \"ab\",
+    \"contact\": \"sit\",
+    \"detail\": \"aut\",
+    \"shop_name\": \"deleniti\",
+    \"address\": \"recusandae\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/nfcrequest"
+    "https://admin.nftpoint.io/api/nfcrequest"
 );
 
 const headers = {
@@ -2386,12 +2444,12 @@ const headers = {
 };
 
 let body = {
-    "name": "itaque",
-    "email": "odio",
-    "contact": "reprehenderit",
-    "detail": "dolor",
-    "shop_name": "reiciendis",
-    "address": "officiis"
+    "name": "autem",
+    "email": "ab",
+    "contact": "sit",
+    "detail": "aut",
+    "shop_name": "deleniti",
+    "address": "recusandae"
 };
 
 fetch(url, {
@@ -2449,7 +2507,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-nfcrequest"
-               value="itaque"
+               value="autem"
                data-component="body" hidden>
     <br>
 
@@ -2459,7 +2517,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-nfcrequest"
-               value="odio"
+               value="ab"
                data-component="body" hidden>
     <br>
 
@@ -2469,7 +2527,7 @@ fetch(url, {
                 <input type="text"
                name="contact"
                data-endpoint="POSTapi-nfcrequest"
-               value="reprehenderit"
+               value="sit"
                data-component="body" hidden>
     <br>
 
@@ -2479,7 +2537,7 @@ fetch(url, {
                 <input type="text"
                name="detail"
                data-endpoint="POSTapi-nfcrequest"
-               value="dolor"
+               value="aut"
                data-component="body" hidden>
     <br>
 
@@ -2489,7 +2547,7 @@ fetch(url, {
                 <input type="text"
                name="shop_name"
                data-endpoint="POSTapi-nfcrequest"
-               value="reiciendis"
+               value="deleniti"
                data-component="body" hidden>
     <br>
 
@@ -2499,7 +2557,7 @@ fetch(url, {
                 <input type="text"
                name="address"
                data-endpoint="POSTapi-nfcrequest"
-               value="officiis"
+               value="recusandae"
                data-component="body" hidden>
     <br>
 
@@ -2524,7 +2582,7 @@ Along token client details will be displayed. To call authorized endpoints you n
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/register" \
+    "https://admin.nftpoint.io/api/seller/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2533,14 +2591,14 @@ Along token client details will be displayed. To call authorized endpoints you n
     \"apple_id\": \"12345678\",
     \"password\": \"admin@123\",
     \"account_type\": \"seller\",
-    \"image\": \"dolor\"
+    \"image\": \"et\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/register"
+    "https://admin.nftpoint.io/api/seller/register"
 );
 
 const headers = {
@@ -2554,7 +2612,7 @@ let body = {
     "apple_id": "12345678",
     "password": "admin@123",
     "account_type": "seller",
-    "image": "dolor"
+    "image": "et"
 };
 
 fetch(url, {
@@ -2680,7 +2738,7 @@ fetch(url, {
                 <input type="text"
                name="image"
                data-endpoint="POSTapi-seller-register"
-               value="dolor"
+               value="et"
                data-component="body" hidden>
     <br>
 <p>The Image Url of seller.</p>
@@ -2701,7 +2759,7 @@ Along token client details will be displayed. To call authorized endpoints you n
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/login" \
+    "https://admin.nftpoint.io/api/seller/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2715,7 +2773,7 @@ Along token client details will be displayed. To call authorized endpoints you n
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/login"
+    "https://admin.nftpoint.io/api/seller/login"
 );
 
 const headers = {
@@ -2845,6 +2903,666 @@ fetch(url, {
         </p>
         </form>
 
+        <h1 id="seller-links">Seller Links</h1>
+
+    <p>APIs endpoints for managing seller</p>
+
+            <h2 id="seller-links-POSTapi-seller-create-link">Create or Update Seller Links</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-seller-create-link">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/seller/create-link" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "fullName=grzwawicaljpurnbjpduqaunecljmiwnlmvwcjkbgwyaxjvxpkbjubrhmvpnsikwaankyqreqgjmwscxmxullkjfnnsoobrjdcqvcqabudqqzqhltokkkuginlvrfqzccsrkqebbzhbephrud" \
+    --form "displayName=kpybiitiirlqzbmhcrheuowvhuvukkfybyjpeyjzrglavoyvbchlpdiritzupkatpgbznmxebylwpbfqkk" \
+    --form "link=praesentium" \
+    --form "updateId=1426793.1" \
+    --form "image=@C:\Users\Super\AppData\Local\Temp\phpF9C5.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/create-link"
+);
+
+const headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('fullName', 'grzwawicaljpurnbjpduqaunecljmiwnlmvwcjkbgwyaxjvxpkbjubrhmvpnsikwaankyqreqgjmwscxmxullkjfnnsoobrjdcqvcqabudqqzqhltokkkuginlvrfqzccsrkqebbzhbephrud');
+body.append('displayName', 'kpybiitiirlqzbmhcrheuowvhuvukkfybyjpeyjzrglavoyvbchlpdiritzupkatpgbznmxebylwpbfqkk');
+body.append('link', 'praesentium');
+body.append('updateId', '1426793.1');
+body.append('image', document.querySelector('input[name="image"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-seller-create-link">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string,
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-seller-create-link" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-seller-create-link"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-seller-create-link"></code></pre>
+</span>
+<span id="execution-error-POSTapi-seller-create-link" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-seller-create-link"></code></pre>
+</span>
+<form id="form-POSTapi-seller-create-link" data-method="POST"
+      data-path="api/seller/create-link"
+      data-authed="0"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-create-link', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-seller-create-link"
+                    onclick="tryItOut('POSTapi-seller-create-link');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-seller-create-link"
+                    onclick="cancelTryOut('POSTapi-seller-create-link');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-seller-create-link" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/seller/create-link</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>fullName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="fullName"
+               data-endpoint="POSTapi-seller-create-link"
+               value="grzwawicaljpurnbjpduqaunecljmiwnlmvwcjkbgwyaxjvxpkbjubrhmvpnsikwaankyqreqgjmwscxmxullkjfnnsoobrjdcqvcqabudqqzqhltokkkuginlvrfqzccsrkqebbzhbephrud"
+               data-component="body" hidden>
+    <br>
+<p>validation.min validation.max.</p>
+        </p>
+                <p>
+            <b><code>displayName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="displayName"
+               data-endpoint="POSTapi-seller-create-link"
+               value="kpybiitiirlqzbmhcrheuowvhuvukkfybyjpeyjzrglavoyvbchlpdiritzupkatpgbznmxebylwpbfqkk"
+               data-component="body" hidden>
+    <br>
+<p>validation.min validation.max.</p>
+        </p>
+                <p>
+            <b><code>link</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="link"
+               data-endpoint="POSTapi-seller-create-link"
+               value="praesentium"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>image</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="image"
+               data-endpoint="POSTapi-seller-create-link"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>Seller profile picture.</p>
+        </p>
+                <p>
+            <b><code>updateId</code></b>&nbsp;&nbsp;<small>number</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="updateId"
+               data-endpoint="POSTapi-seller-create-link"
+               value="1426793.1"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="seller-links-GETapi-seller-get-links-list">Get Seller Links List</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-seller-get-links-list">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://admin.nftpoint.io/api/seller/get-links-list" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": \"1\",
+    \"limit\": \"20\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/get-links-list"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": "1",
+    "limit": "20"
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-seller-get-links-list">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string/null,
+  &quot;data&quot;: [
+  {
+      &quot;id&quot;: number/null,
+      &quot;link&quot;: string/null,
+      &quot;fullname&quot;: string/null,
+      &quot;displayname&quot;: string/null,
+      &quot;image&quot;: string/null,
+      &quot;services&quot;: [
+          {
+              &quot;linkServiceId&quot;: number/null,
+              &quot;serviceId&quot;: number/null,
+              &quot;name&quot;: string/null,
+              &quot;price&quot;: string/null
+          }
+      ]
+ }
+ ],
+  &quot;nextPage&quot;: true/false,
+  &quot;limit&quot;: number/20
+ }</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-seller-get-links-list" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-seller-get-links-list"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-seller-get-links-list"></code></pre>
+</span>
+<span id="execution-error-GETapi-seller-get-links-list" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-seller-get-links-list"></code></pre>
+</span>
+<form id="form-GETapi-seller-get-links-list" data-method="GET"
+      data-path="api/seller/get-links-list"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-seller-get-links-list', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-seller-get-links-list"
+                    onclick="tryItOut('GETapi-seller-get-links-list');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-seller-get-links-list"
+                    onclick="cancelTryOut('GETapi-seller-get-links-list');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-seller-get-links-list" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/seller/get-links-list</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>page</code></b>&nbsp;&nbsp;<small>Its</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="page"
+               data-endpoint="GETapi-seller-get-links-list"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>an optional, by default its consider as 1.</p>
+        </p>
+                <p>
+            <b><code>limit</code></b>&nbsp;&nbsp;<small>Its</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="limit"
+               data-endpoint="GETapi-seller-get-links-list"
+               value="20"
+               data-component="body" hidden>
+    <br>
+<p>an optional, by default its consider as 20.</p>
+        </p>
+        </form>
+
+            <h2 id="seller-links-POSTapi-seller-attach-product-with-links">Attach Product With Links</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-seller-attach-product-with-links">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/seller/attach-product-with-links" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"LinkId\": \"{\\\"linkId\\\": 1,\\\"service\\\": [{\\\"id\\\": 1},{\\\"id\\\": 2},{\\\"id\\\": 3}]}\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/attach-product-with-links"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "LinkId": "{\"linkId\": 1,\"service\": [{\"id\": 1},{\"id\": 2},{\"id\": 3}]}"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-seller-attach-product-with-links">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string,
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-seller-attach-product-with-links" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-seller-attach-product-with-links"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-seller-attach-product-with-links"></code></pre>
+</span>
+<span id="execution-error-POSTapi-seller-attach-product-with-links" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-seller-attach-product-with-links"></code></pre>
+</span>
+<form id="form-POSTapi-seller-attach-product-with-links" data-method="POST"
+      data-path="api/seller/attach-product-with-links"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-attach-product-with-links', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-seller-attach-product-with-links"
+                    onclick="tryItOut('POSTapi-seller-attach-product-with-links');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-seller-attach-product-with-links"
+                    onclick="cancelTryOut('POSTapi-seller-attach-product-with-links');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-seller-attach-product-with-links" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/seller/attach-product-with-links</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>LinkId</code></b>&nbsp;&nbsp;<small>and</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="LinkId"
+               data-endpoint="POSTapi-seller-attach-product-with-links"
+               value="{"linkId": 1,"service": [{"id": 1},{"id": 2},{"id": 3}]}"
+               data-component="body" hidden>
+    <br>
+<p>service parameter are required. Service should be array type and each row should be exist on id parameter.</p>
+        </p>
+        </form>
+
+            <h2 id="seller-links-POSTapi-seller-delete-service-from-link">Delete Services From Link</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-seller-delete-service-from-link">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/seller/delete-service-from-link" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"linkId\": 3.70626,
+    \"service\": [
+        {
+            \"id\": \"voluptatum\"
+        }
+    ],
+    \"LinkId\": \"{\\\"linkId\\\": 1,\\\"service\\\": [{\\\"id\\\": 1},{\\\"id\\\": 2},{\\\"id\\\": 3}]}\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/delete-service-from-link"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "linkId": 3.70626,
+    "service": [
+        {
+            "id": "voluptatum"
+        }
+    ],
+    "LinkId": "{\"linkId\": 1,\"service\": [{\"id\": 1},{\"id\": 2},{\"id\": 3}]}"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-seller-delete-service-from-link">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string,
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-seller-delete-service-from-link" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-seller-delete-service-from-link"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-seller-delete-service-from-link"></code></pre>
+</span>
+<span id="execution-error-POSTapi-seller-delete-service-from-link" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-seller-delete-service-from-link"></code></pre>
+</span>
+<form id="form-POSTapi-seller-delete-service-from-link" data-method="POST"
+      data-path="api/seller/delete-service-from-link"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-delete-service-from-link', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-seller-delete-service-from-link"
+                    onclick="tryItOut('POSTapi-seller-delete-service-from-link');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-seller-delete-service-from-link"
+                    onclick="cancelTryOut('POSTapi-seller-delete-service-from-link');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-seller-delete-service-from-link" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/seller/delete-service-from-link</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>linkId</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="linkId"
+               data-endpoint="POSTapi-seller-delete-service-from-link"
+               value="3.70626"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+        <details>
+            <summary style="padding-bottom: 10px;">
+                <b><code>service</code></b>&nbsp;&nbsp;<small>object[]</small>     <i>optional</i> &nbsp;
+<br>
+
+            </summary>
+                                                <p>
+                        <b><code>service[].id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="service.0.id"
+               data-endpoint="POSTapi-seller-delete-service-from-link"
+               value="voluptatum"
+               data-component="body" hidden>
+    <br>
+
+                    </p>
+                                    </details>
+        </p>
+                <p>
+            <b><code>LinkId</code></b>&nbsp;&nbsp;<small>and</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="LinkId"
+               data-endpoint="POSTapi-seller-delete-service-from-link"
+               value="{"linkId": 1,"service": [{"id": 1},{"id": 2},{"id": 3}]}"
+               data-component="body" hidden>
+    <br>
+<p>service parameter are required. Service should be array type and each row should be exist on id.</p>
+        </p>
+        </form>
+
+            <h2 id="seller-links-POSTapi-seller-delete-seller-link">Delete Seller Link</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-seller-delete-seller-link">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://admin.nftpoint.io/api/seller/delete-seller-link" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"linkId\": \"1\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/seller/delete-seller-link"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "linkId": "1"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-seller-delete-seller-link">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;status&quot;: true/false,
+  &quot;message&quot;: string
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-seller-delete-seller-link" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-seller-delete-seller-link"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-seller-delete-seller-link"></code></pre>
+</span>
+<span id="execution-error-POSTapi-seller-delete-seller-link" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-seller-delete-seller-link"></code></pre>
+</span>
+<form id="form-POSTapi-seller-delete-seller-link" data-method="POST"
+      data-path="api/seller/delete-seller-link"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-seller-delete-seller-link', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-seller-delete-seller-link"
+                    onclick="tryItOut('POSTapi-seller-delete-seller-link');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-seller-delete-seller-link"
+                    onclick="cancelTryOut('POSTapi-seller-delete-seller-link');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-seller-delete-seller-link" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/seller/delete-seller-link</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>linkId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="linkId"
+               data-endpoint="POSTapi-seller-delete-seller-link"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Full name of the Seller.</p>
+        </p>
+        </form>
+
         <h1 id="seller-profile-app">Seller Profile app</h1>
 
     <p>APIs endpoints for managing seller</p>
@@ -2862,13 +3580,13 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/update-basic-detail" \
+    "https://admin.nftpoint.io/api/seller/update-basic-detail" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"fullname\": \"abc\",
     \"displayname\": \"abc\",
-    \"theme\": \"light\",
+    \"theme\": \"dark\",
     \"plan\": \"gold\"
 }"
 </code></pre></div>
@@ -2876,7 +3594,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/update-basic-detail"
+    "https://admin.nftpoint.io/api/seller/update-basic-detail"
 );
 
 const headers = {
@@ -2887,7 +3605,7 @@ const headers = {
 let body = {
     "fullname": "abc",
     "displayname": "abc",
-    "theme": "light",
+    "theme": "dark",
     "plan": "gold"
 };
 
@@ -2981,7 +3699,7 @@ fetch(url, {
                 <input type="text"
                name="theme"
                data-endpoint="POSTapi-seller-update-basic-detail"
-               value="light"
+               value="dark"
                data-component="body" hidden>
     <br>
 <p>validation.required_without_all  Must be one of <code>light</code> or <code>dark</code>.</p>
@@ -3011,17 +3729,17 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/update-seller-profile" \
+    "https://admin.nftpoint.io/api/seller/update-seller-profile" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "fullname=abc" \
     --form "displayname=abc" \
-    --form "image=@C:\Users\umar7\AppData\Local\Temp\phpE420.tmp" </code></pre></div>
+    --form "image=@C:\Users\Super\AppData\Local\Temp\phpF926.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/update-seller-profile"
+    "https://admin.nftpoint.io/api/seller/update-seller-profile"
 );
 
 const headers = {
@@ -3144,14 +3862,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/seller/check-stripe-status" \
+    --get "https://admin.nftpoint.io/api/seller/check-stripe-status" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/check-stripe-status"
+    "https://admin.nftpoint.io/api/seller/check-stripe-status"
 );
 
 const headers = {
@@ -3239,14 +3957,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/get_path" \
+    "https://admin.nftpoint.io/api/get_path" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/get_path"
+    "https://admin.nftpoint.io/api/get_path"
 );
 
 const headers = {
@@ -3321,7 +4039,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/seller/get-all-services" \
+    --get "https://admin.nftpoint.io/api/seller/get-all-services" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -3333,7 +4051,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/get-all-services"
+    "https://admin.nftpoint.io/api/seller/get-all-services"
 );
 
 const headers = {
@@ -3451,7 +4169,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://allset.itsumar.com/api/seller/add-service" \
+    "https://admin.nftpoint.io/api/seller/add-service" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -3462,7 +4180,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/add-service"
+    "https://admin.nftpoint.io/api/seller/add-service"
 );
 
 const headers = {
@@ -3535,14 +4253,33 @@ fetch(url, {
         </p>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <p>
-            <b><code>data</code></b>&nbsp;&nbsp;<small>required</small>     <i>optional</i> &nbsp;
+        <details>
+            <summary style="padding-bottom: 10px;">
+                <b><code>data</code></b>&nbsp;&nbsp;<small>required</small>     <i>optional</i> &nbsp;
+<br>
+<p>Its required parameter and must has product_name,price,status parameters in each row. Pass the id parameter if service record has to update.</p>
+            </summary>
+                                                <p>
+                        <b><code>data[].product_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-               name="data"
+               name="data.0.product_name"
                data-endpoint="POSTapi-seller-add-service"
-               value="[{"id":string/null,"product_name":string/null,"price":string/null,"status":"1/0"}]"
+               value="itaque"
                data-component="body" hidden>
     <br>
-<p>Its required parameter and must has product_name,price,status parameters in each row. Pass the id parameter if service record has to update.</p>
+
+                    </p>
+                                                                <p>
+                        <b><code>data[].price</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="data.0.price"
+               data-endpoint="POSTapi-seller-add-service"
+               value="et"
+               data-component="body" hidden>
+    <br>
+
+                    </p>
+                                    </details>
         </p>
         </form>
 
@@ -3559,14 +4296,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://allset.itsumar.com/api/seller/delete-service/perspiciatis" \
+    "https://admin.nftpoint.io/api/seller/delete-service/repellendus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/seller/delete-service/perspiciatis"
+    "https://admin.nftpoint.io/api/seller/delete-service/repellendus"
 );
 
 const headers = {
@@ -3638,7 +4375,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-seller-delete-service--id-"
-               value="perspiciatis"
+               value="repellendus"
                data-component="url" hidden>
     <br>
 <p>The ID of the delete service.</p>
@@ -3662,14 +4399,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://allset.itsumar.com/api/webpages_show" \
+    --get "https://admin.nftpoint.io/api/webpages_show" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://allset.itsumar.com/api/webpages_show"
+    "https://admin.nftpoint.io/api/webpages_show"
 );
 
 const headers = {
@@ -3695,13 +4432,14 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;status&quot;: true,
+    &quot;message&quot;: &quot;Here is your HTML!&quot;,
     &quot;data&quot;: []
 }</code>
  </pre>
@@ -3745,6 +4483,116 @@ access-control-allow-origin: *
             <small class="badge badge-green">GET</small>
             <b><code>api/webpages_show</code></b>
         </p>
+                    </form>
+
+            <h2 id="webpages-app-GETapi-webpages_show--provider-">GET api/webpages_show/{provider}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-webpages_show--provider-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://admin.nftpoint.io/api/webpages_show/iure" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://admin.nftpoint.io/api/webpages_show/iure"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-webpages_show--provider-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 57
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;status&quot;: false,
+    &quot;message&quot;: &quot;Fill the data in proper way!&quot;,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-webpages_show--provider-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-webpages_show--provider-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-webpages_show--provider-"></code></pre>
+</span>
+<span id="execution-error-GETapi-webpages_show--provider-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-webpages_show--provider-"></code></pre>
+</span>
+<form id="form-GETapi-webpages_show--provider-" data-method="GET"
+      data-path="api/webpages_show/{provider}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-webpages_show--provider-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-webpages_show--provider-"
+                    onclick="tryItOut('GETapi-webpages_show--provider-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-webpages_show--provider-"
+                    onclick="cancelTryOut('GETapi-webpages_show--provider-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-webpages_show--provider-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/webpages_show/{provider}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>provider</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="provider"
+               data-endpoint="GETapi-webpages_show--provider-"
+               value="iure"
+               data-component="url" hidden>
+    <br>
+
+            </p>
                     </form>
 
     

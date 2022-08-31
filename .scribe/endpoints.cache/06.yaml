@@ -38,7 +38,7 @@ endpoints:
         name: theme
         description: 'validation.required_without_all  Must be one of <code>light</code> or <code>dark</code>.'
         required: false
-        example: light
+        example: dark
         type: string
         custom: []
       plan:

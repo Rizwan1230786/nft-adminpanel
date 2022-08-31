@@ -22,21 +22,21 @@ endpoints:
         name: fullName
         description: 'validation.min validation.max.'
         required: true
-        example: kttyedeecuetxwfxelxwmrfxufgzsjfwffeaeccqyhjaplgzxxnjndhcouzgabbebcfudtadnquqwxqlmwnmjvrxcjqpvlelqkfrzrirhkrmmsxqrpglaokliwadgngwkmqwjwmhcafaxeolmmjsfzvblwcogjiihv
+        example: grzwawicaljpurnbjpduqaunecljmiwnlmvwcjkbgwyaxjvxpkbjubrhmvpnsikwaankyqreqgjmwscxmxullkjfnnsoobrjdcqvcqabudqqzqhltokkkuginlvrfqzccsrkqebbzhbephrud
         type: string
         custom: []
       displayName:
         name: displayName
         description: 'validation.min validation.max.'
         required: true
-        example: ahrkeiqoensdbvuokytouvum
+        example: kpybiitiirlqzbmhcrheuowvhuvukkfybyjpeyjzrglavoyvbchlpdiritzupkatpgbznmxebylwpbfqkk
         type: string
         custom: []
       link:
         name: link
         description: ''
         required: true
-        example: nobis
+        example: praesentium
         type: string
         custom: []
       image:
@@ -50,7 +50,7 @@ endpoints:
         name: updateId
         description: ''
         required: false
-        example: 474.85285
+        example: 1426793.1
         type: number
         custom: []
     responses:
@@ -175,7 +175,7 @@ endpoints:
         name: linkId
         description: ''
         required: true
-        example: 68149210.351542
+        example: 3.70626
         type: number
         custom: []
       service:
@@ -190,7 +190,7 @@ endpoints:
         name: 'service[].id'
         description: ''
         required: true
-        example: occaecati
+        example: voluptatum
         type: string
         custom: []
       LinkId:

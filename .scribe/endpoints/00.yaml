@@ -17,7 +17,35 @@ endpoints:
       Accept: application/json
     urlParameters: []
     queryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      facebook_link:
+        name: facebook_link
+        description: ''
+        required: true
+        example: voluptas
+        type: string
+        custom: []
+      instagram_link:
+        name: instagram_link
+        description: ''
+        required: true
+        example: id
+        type: string
+        custom: []
+      tiktok_link:
+        name: tiktok_link
+        description: ''
+        required: true
+        example: similique
+        type: string
+        custom: []
+      twitter_link:
+        name: twitter_link
+        description: ''
+        required: true
+        example: ut
+        type: string
+        custom: []
     responses: []
     responseFields: []
   -

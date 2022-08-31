@@ -75,6 +75,20 @@ endpoints:
         example: '[{"id":string/null,"product_name":string/null,"price":string/null,"status":"1/0"}]'
         type: required
         custom: []
+      'data[].product_name':
+        name: 'data[].product_name'
+        description: ''
+        required: true
+        example: itaque
+        type: string
+        custom: []
+      'data[].price':
+        name: 'data[].price'
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
     responses:
       -
         status: 200
@@ -103,7 +117,7 @@ endpoints:
         name: id
         description: 'The ID of the delete service.'
         required: true
-        example: perspiciatis
+        example: repellendus
         type: string
         custom: []
     queryParameters: []

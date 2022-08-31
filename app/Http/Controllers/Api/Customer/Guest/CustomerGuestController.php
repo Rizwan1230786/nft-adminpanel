@@ -26,8 +26,7 @@ class CustomerGuestController extends Controller
      * Customer Login
      *
      * @bodyParam email email required Email address of customer. Example: abc@gmail.com
-     * @bodyParam macaddress string required Mac Address of customer device. Example: 96-D5-9E-67-40-AB
-     * @bodyParam otp string required OTP code against the customer device. Example: 123456
+     * @bodyParam password string required password the customer. Example: 123456
      *
      * @response {
      *   "status": true/false,

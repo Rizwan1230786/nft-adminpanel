@@ -22,42 +22,42 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: itaque
+        example: autem
         type: string
         custom: []
       email:
         name: email
         description: ''
         required: true
-        example: odio
+        example: ab
         type: string
         custom: []
       contact:
         name: contact
         description: ''
         required: true
-        example: reprehenderit
+        example: sit
         type: string
         custom: []
       detail:
         name: detail
         description: ''
         required: true
-        example: dolor
+        example: aut
         type: string
         custom: []
       shop_name:
         name: shop_name
         description: ''
         required: true
-        example: reiciendis
+        example: deleniti
         type: string
         custom: []
       address:
         name: address
         description: ''
         required: true
-        example: officiis
+        example: recusandae
         type: string
         custom: []
     responses: []

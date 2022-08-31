@@ -74,22 +74,29 @@
                 {
                     "url": "admin/nfts/list",
                     "name": "NFTs List",
-                    "icon": "fas fa-people-arrows",
+                    "icon": "fas fa-arrow-right",
                     "slug": "nfts",
                     "role": "admin"
                 },
                 {
                     "url": "admin/category/list",
                     "name": "Categories",
-                    "icon": "fas fa-people-arrows",
+                    "icon": "fas fa-arrow-right",
                     "slug": "category",
                     "role": "admin"
                 },
                 {
                     "url": "admin/collection/list",
                     "name": "Collections",
-                    "icon": "fas fa-people-arrows",
+                    "icon": "fas fa-arrow-right",
                     "slug": "collection",
+                    "role": "admin"
+                },
+                {
+                    "url": "admin/item/list",
+                    "name": "Create Item",
+                    "icon": "fas fa-arrow-right",
+                    "slug": "item",
                     "role": "admin"
                 }
             ]
@@ -119,28 +126,28 @@
                 {
                     "url": "admin/headerfooter",
                     "name": "App Setting",
-                    "icon": "fas fa-cog",
+                    "icon": "fas fa-arrow-right",
                     "slug": "headerfooter",
                     "role": "admin"
                 },
                 {
                     "url": "admin/role-list",
                     "name": "Roles",
-                    "icon": "fas fa-users-cog",
+                    "icon": "fas fa-arrow-right",
                     "slug": "app-roles-list",
                     "role": "admin"
                 },
                 {
                     "url": "admin/permission/list",
                     "name": "Permission",
-                    "icon": "fas fa-unlock-alt",
+                    "icon": "fas fa-arrow-right",
                     "slug": "permission",
                     "role": "admin"
                 },
                 {
                     "url": "admin/IncomeReport/list",
                     "name": "Income Report",
-                    "icon": "fas fa-address-book",
+                    "icon": "fas fa-arrow-right",
                     "slug": "income",
                     "role": "admin",
                     "roles": "subadmin"

@@ -3,8 +3,8 @@
 use App\Http\Middleware\CheckStatus;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Seller\Links\Links;
-use App\Http\Controllers\api\items\ItemController;
-use App\Http\Controllers\api\front\FrontController;
+use App\Http\Controllers\Api\items\ItemController;
+use App\Http\Controllers\Api\front\FrontController;
 use App\Http\Controllers\Api\Webpages\WebController;
 use App\Http\Controllers\Api\Stripe\StripeController;
 use App\Http\Controllers\Api\NFC\NfcRequestController;
