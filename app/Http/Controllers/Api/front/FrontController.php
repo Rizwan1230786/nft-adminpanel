@@ -64,7 +64,7 @@ class FrontController extends Controller
     }
     public function explore()
     {
-        $explore = items::all();
+        $explore = items::where('status',1)->latest()->take(4)->get();
         if (isset($explore) && !empty($explore)) {
             foreach ($explore as $value) {
                 $value->image = asset('images/items/' . $value->image);

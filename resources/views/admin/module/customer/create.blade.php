@@ -37,12 +37,12 @@
                                     <div class="mb-1 row">
                                         <div class="col-sm-8 offset-2">
                                             <input type="text" class="form-control" id="basic-default-name"
-                                                name="fullname" value="{{ $users->firstname ?? '' }}"
+                                                name="firstname" value="{{ $users->firstname ?? '' }}"
                                                 placeholder="Enter Firstname" />
 
                                         </div>
                                         <div class="col-sm-8 offset-2 mt-1">
-                                            <input type="text" class="form-control" name="username"
+                                            <input type="text" class="form-control" name="lastname"
                                                 value="{{ $users->lastname ?? '' }}" placeholder="Enter Lastname" />
 
                                         </div>
@@ -60,7 +60,7 @@
                                         <?php }
                                     ?>
                                         <div class="col-sm-8 offset-2 mt-1">
-                                            <input type="number" class="form-control" name="contact"
+                                            <input type="number" class="form-control" name="phoneno"
                                                 value="{{ $users->contact ?? '' }}" placeholder="Enter Contact Number" />
 
                                         </div>
@@ -72,12 +72,12 @@
                                         <div class="col-sm-8 offset-2 mt-1">
                                             <?php
                                         if(isset($users->id) && $users->id !=0){?>
-                                            <input type="file" name="photo" data-show-Remove="false"
+                                            <input type="file" name="image" data-show-Remove="false"
                                                 data-default-file="{{ asset('uploads/seller-profile/' . $users->image) ?? '' }}"
                                                 class="dropify" placeholder="">
                                             <?php
                                         }else{?>
-                                            <input type="file" name="photo" data-show-Remove="false"
+                                            <input type="file" name="image" data-show-Remove="false"
                                                 id="input-file-to-destroy"
                                                 data-default-file="{{ asset('images/bcstart_right_image.jpg') }}"
                                                 class="dropify" placeholder="">
@@ -154,5 +154,5 @@
 @endsection
 @section('js')
     @include('admin.layouts.templatejquery')
-    <script src="{{ URL::asset('js/scripts/theamjquery/users/jquery.js') }}"></script>
+    <script src="{{ URL::asset('js/scripts/theamjquery/customer/jquery.js') }}"></script>
 @endsection

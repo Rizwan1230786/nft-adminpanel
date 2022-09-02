@@ -59,5 +59,35 @@ class CustomerController extends Controller
             'breadcrumbs' => $breadcrumbs, 'users' => $users
         ]);
     }
+    public function update(Request $request, $id)
+    {
+        $floder=date('M-y');
+        $type = 'error';
+        $validator = Validator::make($request->all(), [
+        ]);
+        if ($validator->fails()) {
+            $message = $validator->errors()->first();
+        } else {
+            $data = $request->except('_token');
+            if (isset($data['image']) && !empty($data['image'])) {
+                $oldimage = Customer::find($id);
+                if (isset($oldimage->image) && !empty($oldimage->image)) {
+                    $oldimage = public_path('uploads/seller-profile/'. $oldimage->image);
+                    if (File::exists($oldimage)) {
+                        File::delete($oldimage);
+                    }
+                }
+                $imageName = time() . '.' . $data['image']->extension();
+                $data['image'] = $imageName;
+                $request->image->move(public_path('uploads/seller-profile/'), $imageName);
+            }
+            $query = Customer::where('id', $id)->update($data);
+            if (isset($query) && !empty($query)) {
+                $type = "success";
+                $message = "Customer Updated Successfully";
+            }
+        }
+        return response()->json(['type' => $type, 'message' => $message]);
+    }
 
 }
