@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\Customer\GetLinkDetail;
 use App\Http\Requests\Customer\OtpAuthentication;
 use App\Http\Requests\Customer\CustomerAuthentication;
-use App\Http\Requests\Customer\Customercreation;
+use App\Http\Requests\Customer\CustomerCreation;
 
 class CustomerGuestController extends Controller
 {
@@ -45,13 +45,13 @@ class CustomerGuestController extends Controller
      *
      */
 
-    public function signup(Customercreation $request)
+    public function signup(CustomerCreation $request)
     {
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
         $query = Customer::create($data);
         if ($query) {
-            return response(['status' => true, 'message' => 'data inserted successfuly',]);
+            return response(['status' => true, 'message' => 'Data inserted successfuly',]);
         } else {
             return response(['status' => false, 'message' => 'data not inserted']);
         }

@@ -23,21 +23,20 @@ class Customercreation extends FormRequest
     public function rules()
     {
         return [
-            'firstname' => 'min:4|required',
-            'lastname' => 'min:4|required',
+            'firstname' => 'required|min:3',
+            'lastname' => 'required',
             'email' => 'required|email|unique:customers',
             'phoneno' => 'required',
             'dob' => 'required',
-            'password' => 'min:6|required',
+            'password' => 'required|min:6',
         ];
     }
     public function messages()
     {
         return [
             'firstname.required' => __('First name is required.'),
-            'firstname.min' => __('Minimum length should be 4.'),
+            'firstname.min' => __('Minimum length should be 3.'),
             'lastname.required' => __('Last name is required.'),
-            'lastname.min' => __('Minimum length should be 4.'),
             'email.required' => __('Email is required'),
             'email.email' => __('You need to provide valid email address.'),
             'email.unique' => __('Provided email is already taken.'),
