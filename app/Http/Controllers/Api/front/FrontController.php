@@ -21,14 +21,6 @@ class FrontController extends Controller
     public function index()
     {
         $customer = Customer::latest()->take(6)->get();
-        $app_seetings = GeneralSetting::where('id', 1)->first();
-        if (isset($app_seetings) && !empty($app_seetings)) {
-            $app_seetings->header_logo = asset('setting/header/' . $app_seetings->header_logo);
-            $app_seetings->favicon_image = asset('setting/header/' . $app_seetings->favicon_image);
-            $app_seetings->website_logo = asset('setting/header/' . $app_seetings->website_logo);
-            $app_seetings->header_bg_img = asset('setting/header/' . $app_seetings->header_bg_img);
-            $app_seetings->footer_bg_img = asset('setting/header/' . $app_seetings->footer_bg_img);
-        }
         $collection = Collection::latest()->take(8)->get();
         if (isset($collection) && !empty($collection)) {
             foreach ($collection as $value) {
@@ -40,10 +32,22 @@ class FrontController extends Controller
             foreach ($customer as $value) {
                 $value->image = asset('uploads/seller-profile/' . $value->image);
             }
-            return response(['status' => true, 'customer' => $customer, 'app_setting' => $app_seetings, 'popular_collection' => $collection]);
+            return response(['status' => true, 'customer' => $customer,'popular_collection' => $collection]);
         } else {
             return response(['status' => true, 'message' => 'Data not Found']);
         }
+    }
+    public function general_setting()
+    {
+        $app_seetings = GeneralSetting::where('id', 1)->first();
+        if (isset($app_seetings) && !empty($app_seetings)) {
+            $app_seetings->header_logo = asset('setting/header/' . $app_seetings->header_logo);
+            $app_seetings->favicon_image = asset('setting/header/' . $app_seetings->favicon_image);
+            $app_seetings->website_logo = asset('setting/header/' . $app_seetings->website_logo);
+            $app_seetings->header_bg_img = asset('setting/header/' . $app_seetings->header_bg_img);
+            $app_seetings->footer_bg_img = asset('setting/header/' . $app_seetings->footer_bg_img);
+        }
+        return response(['status' => true, 'app_setting' => $app_seetings]);
     }
     public function blog()
     {
@@ -55,19 +59,30 @@ class FrontController extends Controller
         }
         return response(['status' => true, 'Bloag_data' => $blog]);
     }
-    public function blog_detail($slug){
-        $blog_detail=Blog::where('title',$slug)->first();
-        if(isset($blog_detail) && !empty($blog_detail)){
-            $blog_detail->image=asset('images/blog/'.$blog_detail->image);
+    public function blog_detail($slug)
+    {
+        $blog_detail = Blog::where('title', $slug)->first();
+        if (isset($blog_detail) && !empty($blog_detail)) {
+            $blog_detail->image = asset('images/blog/' . $blog_detail->image);
         }
-        return response(['status'=>true,'blogdetail'=>$blog_detail]);
+        return response(['status' => true, 'blogdetail' => $blog_detail]);
     }
     public function explore()
     {
-        $explore = items::where('status',1)->latest()->take(4)->get();
+        $explore = items::where('status', 1)->latest()->take(4)->with('customer')->get();
         if (isset($explore) && !empty($explore)) {
             foreach ($explore as $value) {
                 $value->image = asset('images/items/' . $value->image);
+                foreach ($value->customer as $customer) {
+                    $customer->firstname;
+                    $customer->lastname;
+                    unset($customer->email);
+                    unset($customer->phoneno);
+                    unset($customer->dob);
+                    unset($customer->image);
+                    unset($customer->is_verified);
+                    unset($customer->is_deleted);
+                }
             }
         }
         return response(['status' => true, 'explore' => $explore]);
