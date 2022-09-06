@@ -30,7 +30,23 @@ class ItemController extends Controller
                 }
             }
         }
-        return response(['status'=>true,'items'=>$items]);
+        $recentitems=items::where('status',1)->with('customer')->latest()->take(4)->get();
+        if(isset($recentitems) && !empty($recentitems)){
+            foreach($recentitems as $value){
+                $value->image = asset('images/items/' . $value->image);
+                foreach($value->customer as $customer){
+                    $customer->firstname;
+                    $customer->lastname;
+                    unset($customer->email);
+                    unset($customer->phoneno);
+                    unset($customer->dob);
+                    unset($customer->image);
+                    unset($customer->is_verified);
+                    unset($customer->is_deleted);
+                }
+            }
+        }
+        return response(['status'=>true,'items'=>$items,'recent'=>$recentitems]);
     }
     public function submit(ItemCreation $request){
         $statusCode = 401;

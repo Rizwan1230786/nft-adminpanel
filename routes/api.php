@@ -74,7 +74,7 @@ Route::prefix('/customer')->group(function () {
 Route::get('/index', [FrontController::class, 'index'])->name('index');
 Route::prefix('/blog')->group(function () {
     Route::get('/', [FrontController::class, 'blog'])->name('blog');
-    Route::get('/detail/{slug}', [FrontController::class, 'blog_detail'])->name('blog_detail');
+    Route::get('/detail/{id}', [FrontController::class, 'blog_detail'])->name('blog_detail');
 });
 Route::get('/items', [ItemController::class, 'index'])->name('items');
 Route::get('/explore', [FrontController::class, 'explore'])->name('explore');

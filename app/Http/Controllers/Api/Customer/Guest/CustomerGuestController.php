@@ -51,9 +51,9 @@ class CustomerGuestController extends Controller
         $data['password'] = Hash::make($request->password);
         $query = Customer::create($data);
         if ($query) {
-            return response(['status' => true, 'message' => 'Data inserted successfuly',]);
+            return response(['status' => true, 'message' => 'You are register successfully !!',]);
         } else {
-            return response(['status' => false, 'message' => 'data not inserted']);
+            return response(['status' => false, 'message' => 'Fill the data in proper way!']);
         }
     }
 
@@ -64,9 +64,9 @@ class CustomerGuestController extends Controller
             $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
             $data = Auth::guard('customer')->user();
             $token = $data->createToken('myapp')->accessToken;
-            return response(['status' => true, 'message' => 'Login successfully', 'data' => ['users' => $customer], 'access_token' => $token ,'token_type' => 'Bearer']);
+            return response(['status' => true, 'message' => 'You are login successfully!!', 'user' => $customer, 'access_token' => $token ,'token_type' => 'Bearer']);
         } else {
-            return response(['status' => false, 'message' => 'please enter a correct email or password']);
+            return response(['status' => false, 'message' => 'Please enter a correct email or password']);
         }
     }
     // public function login(CustomerAuthentication $request)

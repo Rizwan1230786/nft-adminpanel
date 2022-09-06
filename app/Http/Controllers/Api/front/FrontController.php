@@ -51,17 +51,17 @@ class FrontController extends Controller
     }
     public function blog()
     {
-        $blog = Blog::all();
+        $blog = Blog::OrderBy('id','desc')->get();
         if (isset($blog) && !empty($blog)) {
             foreach ($blog as $value) {
                 $value->image = asset('images/blog/' . $value->image);
             }
         }
-        return response(['status' => true, 'Bloag_data' => $blog]);
+        return response(['status' => true, 'Blog_data' => $blog]);
     }
-    public function blog_detail($slug)
+    public function blog_detail($id)
     {
-        $blog_detail = Blog::where('title', $slug)->first();
+        $blog_detail = Blog::where('id', $id)->first();
         if (isset($blog_detail) && !empty($blog_detail)) {
             $blog_detail->image = asset('images/blog/' . $blog_detail->image);
         }
@@ -89,18 +89,19 @@ class FrontController extends Controller
     }
     public function author()
     {
-        $author = Customer::select('id', 'image', 'firstname', 'lastname')->with('collection')->get();
+        $author = Collection::select('id','customer_id','banner_image')->with('customer')->get();
         if (isset($author) && !empty($author)) {
             foreach ($author as $value) {
-                $value->image = asset('/uploads/seller-profile/' . $value->image);
-                foreach ($value->collection as $collections) {
-                    unset($collections->name);
-                    unset($collections->detail);
-                    unset($collections->image);
-                    unset($collections->category_id);
-                    unset($collections->created_at);
-                    unset($collections->updated_at);
-                    $collections->banner_image = asset('images/collection/banners/' . $collections->banner_image);
+                $value->banner_image = asset('images/collection/banners/' . $value->banner_image);
+                foreach ($value->customer as $customers) {
+                    unset($customers->created_at);
+                    unset($customers->updated_at);
+                    unset($customers->dob);
+                    unset($customers->email);
+                    unset($customers->phoneno);
+                    unset($customers->is_verified);
+                    unset($customers->is_deleted);
+                    $customers->image= asset('uploads/seller-profile/'.$customers->image);
                 }
             }
         }
