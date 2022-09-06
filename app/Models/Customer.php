@@ -22,9 +22,5 @@ class Customer extends Authenticatable
     protected $hidden = [
         'password',
     ];
-    public function collection()
-    {
-        return $this->hasMany(Collection::class, 'customer_id', 'id');
-    }
 
 }

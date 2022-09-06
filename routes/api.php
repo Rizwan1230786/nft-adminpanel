@@ -74,15 +74,20 @@ Route::prefix('/customer')->group(function () {
 Route::get('/index', [FrontController::class, 'index'])->name('index');
 Route::prefix('/blog')->group(function () {
     Route::get('/', [FrontController::class, 'blog'])->name('blog');
-    Route::get('/detail/{slug}', [FrontController::class, 'blog_detail'])->name('blog_detail');
+    Route::get('/detail/{id}', [FrontController::class, 'blog_detail'])->name('blog_detail');
 });
+Route::get('/items', [ItemController::class, 'index'])->name('items');
 Route::get('/explore', [FrontController::class, 'explore'])->name('explore');
 Route::get('/author', [FrontController::class, 'author'])->name('author');
-
-Route::post('/nfcrequest', [NfcRequestController::class, 'submit']);
-Route::get('/webpages_show/{provider}', [WebController::class, 'webpages_show_provider']);
-Route::get('/webpages_show', [WebController::class, 'webpages_show']);
+Route::get('/general_setting', [FrontController::class, 'general_setting'])->name('general_setting');
 Route::get('/migrate', [DatabaseManageController::class, 'Add']);
+
+
+
+
+// Route::post('/nfcrequest', [NfcRequestController::class, 'submit']);
+// Route::get('/webpages_show/{provider}', [WebController::class, 'webpages_show_provider']);
+// Route::get('/webpages_show', [WebController::class, 'webpages_show']);
 //end//////
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();

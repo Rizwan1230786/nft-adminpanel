@@ -8,11 +8,46 @@ use App\Models\items;
 use App\Http\Traits\Helpers;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Items\ItemCreation;
+use App\Models\Customer;
 
 class ItemController extends Controller
 {
     use Helpers;
-
+    public function index(){
+        $items = items::where('status',1)->with('customer')->get();
+        if(isset($items) && !empty($items)){
+            foreach($items as $value){
+                $value->image = asset('images/items/' . $value->image);
+                foreach($value->customer as $customer){
+                    $customer->firstname;
+                    $customer->lastname;
+                    unset($customer->email);
+                    unset($customer->phoneno);
+                    unset($customer->dob);
+                    unset($customer->image);
+                    unset($customer->is_verified);
+                    unset($customer->is_deleted);
+                }
+            }
+        }
+        $recentitems=items::where('status',1)->with('customer')->latest()->take(4)->get();
+        if(isset($recentitems) && !empty($recentitems)){
+            foreach($recentitems as $value){
+                $value->image = asset('images/items/' . $value->image);
+                foreach($value->customer as $customer){
+                    $customer->firstname;
+                    $customer->lastname;
+                    unset($customer->email);
+                    unset($customer->phoneno);
+                    unset($customer->dob);
+                    unset($customer->image);
+                    unset($customer->is_verified);
+                    unset($customer->is_deleted);
+                }
+            }
+        }
+        return response(['status'=>true,'items'=>$items,'recent'=>$recentitems]);
+    }
     public function submit(ItemCreation $request){
         $statusCode = 401;
         $message = "Fill the data in proper way!";

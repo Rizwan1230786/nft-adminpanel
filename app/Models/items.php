@@ -9,4 +9,11 @@ class items extends Model
 {
     use HasFactory;
     protected $fillable=['user_id','image','name','detail','price','royality','size','no_of_copies','put_on_sale','sale_prize','unlock_purchased'];
+
+    public function customer()
+    {
+        return $this->hasMany(Customer::class, 'id', 'user_id');
+    }
+
+
 }
