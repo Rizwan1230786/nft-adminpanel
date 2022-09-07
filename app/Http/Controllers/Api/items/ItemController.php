@@ -69,4 +69,11 @@ class ItemController extends Controller
             return response(['status'=>true,'message'=>'Please check the cridinals']);
         }
     }
+    public function items_detail($id){
+        $itemsdetail=items::where('id',$id)->with('customer')->first();
+        if(isset($itemsdetail) && !empty($itemsdetail)){
+            $itemsdetail->image= asset('images/items/'.$itemsdetail->image);
+        }
+        return response(['status'=>true,'itemsdetail'=>$itemsdetail]);
+    }
 }

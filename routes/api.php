@@ -77,6 +77,7 @@ Route::prefix('/blog')->group(function () {
     Route::get('/detail/{id}', [FrontController::class, 'blog_detail'])->name('blog_detail');
 });
 Route::get('/items', [ItemController::class, 'index'])->name('items');
+Route::get('/items_detail/{id}', [ItemController::class, 'items_detail'])->name('items_detail');
 Route::get('/explore', [FrontController::class, 'explore'])->name('explore');
 Route::get('/author', [FrontController::class, 'author'])->name('author');
 Route::get('/general_setting', [FrontController::class, 'general_setting'])->name('general_setting');

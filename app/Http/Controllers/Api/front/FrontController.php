@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api\front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Category;
 use App\Models\Collection;
 use App\Models\Customer;
 use App\Models\GeneralSetting;
@@ -62,10 +63,11 @@ class FrontController extends Controller
     public function blog_detail($id)
     {
         $blog_detail = Blog::where('id', $id)->first();
+        $category=Category::select('id','name')->get();
         if (isset($blog_detail) && !empty($blog_detail)) {
             $blog_detail->image = asset('images/blog/' . $blog_detail->image);
         }
-        return response(['status' => true, 'blogdetail' => $blog_detail]);
+        return response(['status' => true, 'blogdetail' => $blog_detail,'category'=>$category]);
     }
     public function explore()
     {
