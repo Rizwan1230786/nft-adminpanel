@@ -9,8 +9,10 @@ use App\Http\Controllers\Api\Webpages\WebController;
 use App\Http\Controllers\Api\Stripe\StripeController;
 use App\Http\Controllers\Api\NFC\NfcRequestController;
 use App\Http\Controllers\Table\DatabaseManageController;
+use App\Http\Controllers\Api\contact\ContactusController;
 use App\Http\Controllers\Api\Seller\Guest\GuestController;
 use App\Http\Controllers\Api\Barber\Profile\BarberController;
+use App\Http\Controllers\Api\collection\CollectionController;
 use App\Http\Controllers\Api\Customer\Profile\ProfileController;
 use App\Http\Controllers\Api\Seller\Services\ServicesController;
 use App\Http\Controllers\Api\Seller\Authorization\AuthController;
@@ -69,6 +71,10 @@ Route::prefix('/customer')->group(function () {
         Route::post('/customer_order',[CustomerOrderController::class, 'customer_order']);
         ///////route of items//////////////////
         Route::post('/create-items', [ItemController::class, 'submit']);
+        //////route of collection////
+        Route::get('/collection', [CollectionController::class, 'index']);
+        Route::post('/create-collection', [CollectionController::class, 'submit']);
+
     });
 });
 Route::get('/index', [FrontController::class, 'index'])->name('index');
@@ -82,6 +88,7 @@ Route::get('/explore', [FrontController::class, 'explore'])->name('explore');
 Route::get('/author', [FrontController::class, 'author'])->name('author');
 Route::get('/general_setting', [FrontController::class, 'general_setting'])->name('general_setting');
 Route::get('/migrate', [DatabaseManageController::class, 'Add']);
+Route::post('/contactus', [ContactusController::class, 'contactus'])->name('contactus');
 
 
 

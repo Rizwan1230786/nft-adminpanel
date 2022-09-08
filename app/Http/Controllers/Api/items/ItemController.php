@@ -73,6 +73,9 @@ class ItemController extends Controller
         $itemsdetail=items::where('id',$id)->with('customer')->first();
         if(isset($itemsdetail) && !empty($itemsdetail)){
             $itemsdetail->image= asset('images/items/'.$itemsdetail->image);
+            foreach($itemsdetail->customer as $value){
+                $value->image=asset('uploads/seller-profile/'.$value->image);
+            }
         }
         return response(['status'=>true,'itemsdetail'=>$itemsdetail]);
     }
