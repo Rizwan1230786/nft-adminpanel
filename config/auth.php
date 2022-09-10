@@ -13,7 +13,6 @@ return [
     'defaults' => [
         'guard' => 'web',
         'guard' => 'sellerService',
-        'guard' => 'customer',
         'passwords' => 'users',
     ],
     /*
@@ -45,15 +44,6 @@ return [
             'driver' => 'passport',
             'provider' => 'sellerService',
         ],
-        'customer' => [
-            'driver' => 'session',
-            'provider' => 'customers',
-        ],
-        'customerapi' => [
-            'driver' => 'passport',
-            'provider' => 'customers',
-            'hash' => false,
-        ],
     ],
     /*
     |--------------------------------------------------------------------------
@@ -77,10 +67,6 @@ return [
             'model' => App\Models\User::class,
         ],
         'sellerService' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Seller::class,
-        ],
-        'customers' => [
             'driver' => 'eloquent',
             'model' => App\Models\Customer::class,
         ],

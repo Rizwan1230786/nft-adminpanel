@@ -27,7 +27,6 @@ class Collections extends FormRequest
             'name' => 'required|min:4',
             'image' => 'required',
             'banner_image' => 'required',
-            'category_id' => 'required',
         ];
     }
     public function messages()
@@ -37,7 +36,6 @@ class Collections extends FormRequest
             'name.min' => __('The minimum length should be 4.'),
             'image.required' => __('Logo image is required.'),
             'banner_image.required' => __('Banner image is required.'),
-            'category_id.required' => __('Please chose a category.'),
         ];
     }
 }

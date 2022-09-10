@@ -102,4 +102,5 @@ class CategoryController extends Controller
             $user->save();
             return response()->json(['status' => true]);
     }
+
 }

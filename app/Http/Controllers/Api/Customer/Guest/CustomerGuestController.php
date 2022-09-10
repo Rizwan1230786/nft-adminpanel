@@ -60,9 +60,9 @@ class CustomerGuestController extends Controller
     public function login(CustomerAuthentication $request)
     {
 
-        if (Auth::guard('customer')->attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::guard('sellerService')->attempt(['email' => $request->email, 'password' => $request->password])) {
             $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
-            $data = Auth::guard('customer')->user();
+            $data = Auth::guard('sellerService')->user();
             $token = $data->createToken('myapp')->accessToken;
             return response(['status' => true, 'message' => 'You are login successfully!!', 'user' => $customer, 'access_token' => $token ,'token_type' => 'Bearer']);
         } else {

@@ -30,31 +30,6 @@ use App\Http\Controllers\Api\Seller\Authorization\ChangePasswordController;
 |
 */
 ////////Admin Auth Api//////////////////////
-Route::prefix('/seller')->group(function () {
-    Route::post('/register', [GuestController::class, 'register']);
-    Route::post('/login', [GuestController::class, 'login']);
-    Route::group(['middleware' =>[ 'auth:sellerServiceApi', 'checkstatus']], function () {
-        ////Seller Profile Routes////
-        Route::post('/update-basic-detail', [AuthController::class, 'updateBasicDetail']);
-        Route::post('/update-seller-profile', [AuthController::class, 'updateSellerProfile']);
-        Route::get('/check-stripe-status', [AuthController::class, 'checkStripeStatus']);
-        ////Services Routes////
-        Route::get('/get-all-services', [ServicesController::class, 'servicesList']);
-        Route::post('/add-service', [ServicesController::class, 'addService']);
-        Route::delete('/delete-service/{id}', [ServicesController::class, 'deleteService']);
-        ////Seller Links Routes////
-        Route::post('/create-link', [Links::class, 'createLink']);
-        Route::get('/get-links-list', [Links::class, 'getLinksList']);
-        Route::post('/attach-product-with-links', [Links::class, 'attachProductWithLinks']);
-        Route::post('/delete-service-from-link', [Links::class, 'deleteServiceFromLink']);
-        Route::post('/delete-seller-link', [Links::class, 'deleteSellerLink']);
-        Route::post('/social-link', [BarberController::class, 'barber_profile']);
-        Route::get('/profile-show', [BarberController::class, 'barber_data']);
-        Route::get('/get-profile-data', [BarberController::class, 'get_profile_data']);
-        Route::post('/update_profile_data', [BarberController::class, 'update_profile_data']);
-        Route::post('/change-password', [ChangePasswordController::class, 'change_password']);
-    });
-});
 ///Get image path////
 Route::post('/get_path', [AuthController::class, 'image_path_with_default']);
 ///Payment history////
@@ -65,7 +40,7 @@ Route::prefix('/customer')->group(function () {
     Route::post('/customer-login', [CustomerGuestController::class, 'login']);
     // Route::post('/send-otp-code', [CustomerGuestController::class, 'sendOTPCode']);
     // Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
-    Route::group(['middleware' => 'auth:customerapi'], function () {
+    Route::group(['middleware' => 'auth:sellerServiceApi'], function () {
         Route::get('/profile', [ProfileController::class, 'customer_profile']);
         Route::post('/profile/update', [ProfileController::class, 'customer']);
         Route::post('/customer_order',[CustomerOrderController::class, 'customer_order']);
@@ -73,6 +48,7 @@ Route::prefix('/customer')->group(function () {
         Route::post('/create-items', [ItemController::class, 'submit']);
         //////route of collection////
         Route::get('/collection', [CollectionController::class, 'index']);
+        Route::get('/collection-category', [CollectionController::class, 'category'])->name('collection-category');
         Route::post('/create-collection', [CollectionController::class, 'submit']);
 
     });

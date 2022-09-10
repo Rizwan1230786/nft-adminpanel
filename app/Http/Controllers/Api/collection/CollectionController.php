@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\collection\Collections;
-
+use App\Models\Category;
 
 class CollectionController extends Controller
 {
@@ -16,11 +16,21 @@ class CollectionController extends Controller
         $collection=Collection::where('customer_id',$customerid)->get();
         if(isset($collection) && !empty($collection)){
             foreach($collection as $value){
+                $category=Category::where('id',$value->category_id)->first();
+                if(isset($category) && !empty($category)){
+                    $value->category_id=$category->name;
+                }else{
+                    $value->category_id="none";
+                }
                 $value->image = asset('images/collection/logo/'.$value->image);
-                $value->banner_image = asset('images/collection/banner/'.$value->banner_image);
+                $value->banner_image = asset('images/collection/banners/'.$value->banner_image);
             }
         }
-        return response(['status'=>true,'message'=>$collection]);
+        return response(['status'=>true,'collection'=>$collection]);
+    }
+    public function category(){
+        $category=Category::select('id','name')->get();
+        return response(['status'=>true, 'category'=>$category]);
     }
     public function submit(Collections $request)
     {
@@ -28,7 +38,7 @@ class CollectionController extends Controller
         $floder = date('M-y');
         $customerid = Auth::user()->id;
         $data = $request->all();
-        $data = array_merge($data, array("name" => ($data["name"] ?? null)), array("image" => ($data["image"] ?? null)), array("banner_image" => ($data["banner_image"] ?? null)), array("category_id" => ($data["category_id"] ?? null)),array("customer_id" => ($customerid ?? null)));
+        $data = array_merge($data, array("name" => ($data["name"] ?? null)), array("banner_image" => ($data["banner_image"] ?? null)), array("category_id" => ($data["category_id"] ?? null)),array("customer_id" => ($customerid ?? null)));
         if (isset($data['image']) && !empty($data['image'])) {
             $imageName = time() . '.' . $data['image']->extension();
             $data['image'] = $floder . '/' . $imageName;

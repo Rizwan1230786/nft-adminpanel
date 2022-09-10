@@ -24,7 +24,7 @@ class ItemCreation extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'min:4|required',
+            'name' => 'required|min:4',
             'price' => 'required',
             'size' => 'required',
             'image' => 'required',
