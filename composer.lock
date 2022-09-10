@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1910367595ff7ce0d772c1febbb843c9",
+    "content-hash": "3a5c58ba366cd5895b2e53852b5ff1f3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1408,6 +1408,68 @@
                 "source": "https://github.com/Jimmy-JS/laravel-report-generator/tree/2.2.0"
             },
             "time": "2022-04-23T05:59:12+00:00"
+        },
+        {
+            "name": "json-mapper/json-mapper",
+            "version": "2.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JsonMapper/JsonMapper.git",
+                "reference": "0a9da8210f20f2d09ad7f2026aa5089ae027715b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JsonMapper/JsonMapper/zipball/0a9da8210f20f2d09ad7f2026aa5089ae027715b",
+                "reference": "0a9da8210f20f2d09ad7f2026aa5089ae027715b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "myclabs/php-enum": "^1.7",
+                "nikic/php-parser": "^4.13",
+                "php": "^7.1 || ^8.0",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
+                "psr/simple-cache": "^1.0",
+                "symfony/polyfill-php73": "^1.18"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.5 || ^7.0",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpstan/phpstan": "^0.12.14",
+                "phpstan/phpstan-phpunit": "^0.12.17",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/console": "^2.1 || ^3.0 || ^4.0 || ^5.0",
+                "vimeo/psalm": "^4.10"
+            },
+            "suggest": {
+                "json-mapper/laravel-package": "Use JsonMapper directly with Laravel",
+                "json-mapper/symfony-bundle": "Use JsonMapper directly with Symfony"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JsonMapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Map JSON structures to PHP classes",
+            "homepage": "https://jsonmapper.net",
+            "keywords": [
+                "json",
+                "jsonmapper",
+                "mapper",
+                "middleware"
+            ],
+            "support": {
+                "docs": "https://jsonmapper.net",
+                "issues": "https://github.com/JsonMapper/JsonMapper/issues",
+                "source": "https://github.com/JsonMapper/JsonMapper"
+            },
+            "time": "2022-08-17T19:27:13+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3628,6 +3690,130 @@
             "time": "2022-06-14T06:56:20+00:00"
         },
         {
+            "name": "paragonie/halite",
+            "version": "v5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/halite.git",
+                "reference": "666f9770a12bd8a49cefba16c759baa4843dbf5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/halite/zipball/666f9770a12bd8a49cefba16c759baa4843dbf5a",
+                "reference": "666f9770a12bd8a49cefba16c759baa4843dbf5a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "paragonie/constant_time_encoding": "^2",
+                "paragonie/hidden-string": "^1|^2",
+                "paragonie/sodium_compat": "^1.17",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9",
+                "vimeo/psalm": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ParagonIE\\Halite\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "info@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "High-level cryptography interface powered by libsodium",
+            "homepage": "https://github.com/paragonie/halite",
+            "keywords": [
+                "Argon2i",
+                "BLAKE",
+                "BLAKE2",
+                "BLAKE2b",
+                "Curve25519",
+                "Ed25519",
+                "X25519",
+                "Xsalsa20",
+                "argon2",
+                "cryptography",
+                "encryption",
+                "ext-sodium",
+                "hashing",
+                "libsodium",
+                "password",
+                "public-key",
+                "signatures",
+                "sodium"
+            ],
+            "support": {
+                "docs": "https://github.com/paragonie/halite/tree/master/doc",
+                "issues": "https://github.com/paragonie/halite/issues",
+                "source": "https://github.com/paragonie/halite/tree/v5.1.0"
+            },
+            "time": "2022-05-23T05:02:50+00:00"
+        },
+        {
+            "name": "paragonie/hidden-string",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/hidden-string.git",
+                "reference": "151e53d55bfc67dd58087cdf8762dd8177ea7575"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/hidden-string/zipball/151e53d55bfc67dd58087cdf8762dd8177ea7575",
+                "reference": "151e53d55bfc67dd58087cdf8762dd8177ea7575",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/constant_time_encoding": "^2",
+                "paragonie/sodium_compat": "^1.6",
+                "php": "^7.4|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6|^7|^8|^9",
+                "vimeo/psalm": "^3|^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ParagonIE\\HiddenString\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "info@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "Encapsulate strings in an object to hide them from stack traces",
+            "homepage": "https://github.com/paragonie/hidden-string",
+            "keywords": [
+                "hidden",
+                "stack trace",
+                "string"
+            ],
+            "support": {
+                "issues": "https://github.com/paragonie/hidden-string/issues",
+                "source": "https://github.com/paragonie/hidden-string/tree/v2.0.0"
+            },
+            "time": "2020-12-06T15:07:44+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.100",
             "source": {
@@ -3676,6 +3862,92 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "paragonie/sodium_compat",
+            "version": "v1.17.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/sodium_compat.git",
+                "reference": "ac994053faac18d386328c91c7900f930acadf1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/ac994053faac18d386328c91c7900f930acadf1e",
+                "reference": "ac994053faac18d386328c91c7900f930acadf1e",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": ">=1",
+                "php": "^5.2.4|^5.3|^5.4|^5.5|^5.6|^7|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3|^4|^5|^6|^7|^8|^9"
+            },
+            "suggest": {
+                "ext-libsodium": "PHP < 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security.",
+                "ext-sodium": "PHP >= 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com"
+                },
+                {
+                    "name": "Frank Denis",
+                    "email": "jedisct1@pureftpd.org"
+                }
+            ],
+            "description": "Pure PHP implementation of libsodium; uses the PHP extension if it exists",
+            "keywords": [
+                "Authentication",
+                "BLAKE2b",
+                "ChaCha20",
+                "ChaCha20-Poly1305",
+                "Chapoly",
+                "Curve25519",
+                "Ed25519",
+                "EdDSA",
+                "Edwards-curve Digital Signature Algorithm",
+                "Elliptic Curve Diffie-Hellman",
+                "Poly1305",
+                "Pure-PHP cryptography",
+                "RFC 7748",
+                "RFC 8032",
+                "Salpoly",
+                "Salsa20",
+                "X25519",
+                "XChaCha20-Poly1305",
+                "XSalsa20-Poly1305",
+                "Xchacha20",
+                "Xsalsa20",
+                "aead",
+                "cryptography",
+                "ecdh",
+                "elliptic curve",
+                "elliptic curve cryptography",
+                "encryption",
+                "libsodium",
+                "php",
+                "public-key cryptography",
+                "secret-key cryptography",
+                "side-channel resistant"
+            ],
+            "support": {
+                "issues": "https://github.com/paragonie/sodium_compat/issues",
+                "source": "https://github.com/paragonie/sodium_compat/tree/v1.17.1"
+            },
+            "time": "2022-03-23T19:32:04+00:00"
         },
         {
             "name": "phenx/php-font-lib",
@@ -4765,6 +5037,209 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "rootsoft/algorand-php",
+            "version": "v0.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RootSoft/algorand-php.git",
+                "reference": "c6598ee0838b19713947597a5f353b035b2ce4ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RootSoft/algorand-php/zipball/c6598ee0838b19713947597a5f353b035b2ce4ff",
+                "reference": "c6598ee0838b19713947597a5f353b035b2ce4ff",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.9.3",
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.4.1",
+                "guzzlehttp/psr7": "^1.8.2|^2.1.0",
+                "illuminate/container": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "json-mapper/json-mapper": "^2.12.0",
+                "myclabs/php-enum": "^1.7",
+                "paragonie/constant_time_encoding": "^2.4",
+                "paragonie/halite": "^5.0.0",
+                "php": "^7.4|^8.0",
+                "rybakit/msgpack": "^0.7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.1",
+                "orchestra/testbench": "^6.12",
+                "phpunit/phpunit": "^9.5",
+                "spatie/ray": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rootsoft\\Algorand\\AlgorandServiceProvider"
+                    ],
+                    "aliases": {
+                        "Algorand": "Rootsoft\\Algorand\\Facades\\AlgorandFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rootsoft\\Algorand\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomas Verhelst",
+                    "email": "tomasverhelst@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Community SDK to interact with the Algorand network, in PHP & Laravel",
+            "homepage": "https://github.com/rootsoft/algorand-php",
+            "keywords": [
+                "algorand",
+                "algorand-php",
+                "blockchain",
+                "rootsoft"
+            ],
+            "support": {
+                "issues": "https://github.com/RootSoft/algorand-php/issues",
+                "source": "https://github.com/RootSoft/algorand-php/tree/v0.0.10"
+            },
+            "time": "2022-05-11T09:14:17+00:00"
+        },
+        {
+            "name": "rootsoft/laravel-ipfs",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RootSoft/laravel-ipfs.git",
+                "reference": "e900355db638dd9302abda3dee78532da10a7f45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RootSoft/laravel-ipfs/zipball/e900355db638dd9302abda3dee78532da10a7f45",
+                "reference": "e900355db638dd9302abda3dee78532da10a7f45",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.2",
+                "league/flysystem": "^1.1.3",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "orchestra/testbench": "^6.15",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rootsoft\\IPFS\\IPFSServiceProvider"
+                    ],
+                    "aliases": {
+                        "IPFS": "Rootsoft\\IPFS\\IPFSFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rootsoft\\IPFS\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomas Verhelst",
+                    "email": "tomas.verhelst@kotapp.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package to communicate with IPFS",
+            "homepage": "https://github.com/rootsoft/laravel-ipfs",
+            "keywords": [
+                "ipfs",
+                "laravel",
+                "laravel-ipfs",
+                "php",
+                "rootsoft"
+            ],
+            "support": {
+                "issues": "https://github.com/RootSoft/laravel-ipfs/issues",
+                "source": "https://github.com/RootSoft/laravel-ipfs/tree/0.0.1"
+            },
+            "time": "2021-04-06T19:05:24+00:00"
+        },
+        {
+            "name": "rybakit/msgpack",
+            "version": "v0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/msgpack.php.git",
+                "reference": "f3ad27e3e7eba2204e022ec175a981e6ccb97548"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rybakit/msgpack.php/zipball/f3ad27e3e7eba2204e022ec175a981e6ccb97548",
+                "reference": "f3ad27e3e7eba2204e022ec175a981e6ccb97548",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.1|^8"
+            },
+            "require-dev": {
+                "ext-gmp": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpunit/phpunit": "^7.1|^8|^9"
+            },
+            "suggest": {
+                "ext-decimal": "For converting overflowed integers to Decimal objects",
+                "ext-gmp": "For converting overflowed integers to GMP objects"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MessagePack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "A pure PHP implementation of the MessagePack serialization format.",
+            "keywords": [
+                "messagepack",
+                "msgpack",
+                "pure",
+                "streaming"
+            ],
+            "support": {
+                "issues": "https://github.com/rybakit/msgpack.php/issues",
+                "source": "https://github.com/rybakit/msgpack.php/tree/v0.7.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/rybakit",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-18T21:14:07+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",

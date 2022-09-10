@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Items;
+namespace App\Http\Requests\collection;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ItemCreation extends FormRequest
+class Collections extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,22 +25,17 @@ class ItemCreation extends FormRequest
     {
         return [
             'name' => 'required|min:4',
-            'price' => 'required',
-            'size' => 'required',
             'image' => 'required',
-            'no_of_copies' => 'required',
+            'banner_image' => 'required',
         ];
     }
-
     public function messages()
     {
         return [
-            'name.required' => __('Name is required.'),
-            'name.min' => __('Minimum length should be 4.'),
-            'price.required' => __('Price is required.'),
-            'size.required' => __('Size is required.'),
-            'image.required' => __('Image is required.'),
-            'no_of_copies.required' => __('No of copies is required.'),
+            'name.required' => __('The name is required.'),
+            'name.min' => __('The minimum length should be 4.'),
+            'image.required' => __('Logo image is required.'),
+            'banner_image.required' => __('Banner image is required.'),
         ];
     }
 }

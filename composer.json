@@ -19,6 +19,8 @@
     "laravel/tinker": "^2.5",
     "laravelcollective/html": "^6.2",
     "laraveldaily/laravel-charts": "^0.1.29",
+    "rootsoft/algorand-php": "^0.0.10",
+    "rootsoft/laravel-ipfs": "^0.0.1",
     "spatie/laravel-permission": "^5.4",
     "stripe/stripe-php": "^7.114",
     "twilio/sdk": "^6.34",

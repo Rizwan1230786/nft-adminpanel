@@ -7,6 +7,7 @@ use App\Http\Requests\Customer\Customercreation;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Http\Traits\Helpers;
+use App\Models\items;
 use Illuminate\Support\Facades\File;
 
 /**
@@ -58,12 +59,17 @@ class ProfileController extends Controller
         $customer_id = $request->user()->id;
         if (isset($customer_id) && !empty($customer_id)) {
             $customer = Customer::where("id", $customer_id)->select('id', 'firstname', 'lastname', 'phoneno', 'email', 'dob', 'image')->first();
+            $item=items::where('user_id',$customer->id)->select('id','image')->first();
+            if(isset($item) && !empty($item)){
+                $item->image=asset('images/items/'.$item->image);
+            }
             $statusCode = 200;
             $message = "Here is your profile detail!";
             if (isset($customer) && !empty($customer)) {
                 $customer->image = asset('/uploads/seller-profile/') . '/' . $customer->image;
             }
         }
-        return response(['status' => ($statusCode == 200 ? true : false), 'message' => ($statusCode == 200 && $message == null ?: $message), "customer" => ($customer ?? array())], $statusCode);
+        return response(['status' => ($statusCode == 200 ? true : false), 'message' => ($statusCode == 200 && $message == null ?: $message), "customer" => ($customer ?? array()),'items' =>($item ?? array())], $statusCode);
     }
+
 }

@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class createwalletmodel extends Model
 {
     use HasFactory;
-    protected $fillable = ['title' ,'detail','created_by','image','url_slug'];
 }

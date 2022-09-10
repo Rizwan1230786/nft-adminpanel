@@ -4,6 +4,7 @@ use App\Models\Income;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\ImageController;
+use App\View\Components\createwalletmodel;
 use App\Http\Controllers\admin\WebController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\User\FrontController;
@@ -146,6 +147,9 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::post('/item/update/{id}',[ItemsController::class,'update'])->name('item-update');
         Route::post('/item/delete/{id}', [ItemsController::class, 'destory'])->name('item-delete');
         Route::get('/item/status', [ItemsController::class, 'status'])->name('item-status');
+        //////create wallet/////
+        Route::get('/wallet-list',[createwalletmodel::class,'render']);
+        Route::get('/create-wallet',[createwalletmodel::class,'createWallet'])->name('create-wallet');
 
 
     });

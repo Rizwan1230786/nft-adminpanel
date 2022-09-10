@@ -40,6 +40,10 @@
                                         <label for="">Page Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="{{ $blog->title ?? '' }}" placeholder="Enter page title" />
                                     </div>
+                                    <div class="col-sm-8 offset-2">
+                                        <label for="">Url Slug</label>
+                                        <input type="text" class="form-control" id="url_slug" name="url_slug" value="{{ $blog->url_slug ?? '' }}" placeholder="Enter page title" />
+                                    </div>
                                     <div class="col-sm-8 offset-2 mt-1">
                                         <label for="">Created by</label>
                                         <input type="text" class="form-control" id="title" name="created_by" value="{{ Auth::user()->fullname }}" />
@@ -75,6 +79,12 @@
         </div>
     </div>
 </section>
+<script>
+    $(document).off("keyup", "#title").on("keyup", "#title", function(event) {
+        var page_title = $(this).val();
+        $("#url_slug").val(page_title.toLowerCase().replace(/ /g, '_').replace(/[^\w-]+/g, ''));
+    });
+</script>
 @endsection
 @section('vendor-style')
 <!-- vendor css files -->

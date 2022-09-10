@@ -23,4 +23,9 @@ class Customer extends Authenticatable
         'password',
     ];
 
+    public function item()
+    {
+        return $this->hasMany(items::class, 'user_id', 'id');
+    }
+
 }
