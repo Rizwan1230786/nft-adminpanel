@@ -18,6 +18,8 @@ use App\Http\Requests\Customer\GetLinkDetail;
 use App\Http\Requests\Customer\OtpAuthentication;
 use App\Http\Requests\Customer\CustomerAuthentication;
 use App\Http\Requests\Customer\CustomerCreation;
+use App\Http\Requests\Customer\walletAddress;
+use Svg\Tag\Rect;
 
 class CustomerGuestController extends Controller
 {
@@ -61,6 +63,7 @@ class CustomerGuestController extends Controller
     {
 
         if (Auth::guard('sellerService')->attempt(['email' => $request->email, 'password' => $request->password])) {
+
             $customer = Customer::select(["id", "firstname", "lastname", "email", "phoneno", "dob"])->Where(['email' => $request["email"]])->first();
             $data = Auth::guard('sellerService')->user();
             $token = $data->createToken('myapp')->accessToken;
@@ -68,6 +71,11 @@ class CustomerGuestController extends Controller
         } else {
             return response(['status' => false, 'message' => 'Please enter a correct email or password']);
         }
+    }
+    public function update_user(walletAddress $request){
+        $id=Auth::user()->id;
+        Customer::where('id',$id)->update(['wallet_address'=>$request->wallet_address]);
+        return response(['status' => true, 'message' => 'Wallet Address updated successfully']);
     }
     // public function login(CustomerAuthentication $request)
     // {

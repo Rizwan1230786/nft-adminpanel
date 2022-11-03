@@ -41,6 +41,7 @@ Route::prefix('/customer')->group(function () {
     // Route::post('/send-otp-code', [CustomerGuestController::class, 'sendOTPCode']);
     // Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
     Route::group(['middleware' => 'auth:sellerServiceApi'], function () {
+        Route::post('/update-user-wallet-address', [CustomerGuestController::class, 'update_user']);
         Route::get('/profile', [ProfileController::class, 'customer_profile']);
         Route::post('/profile/update', [ProfileController::class, 'customer']);
         Route::post('/customer_order',[CustomerOrderController::class, 'customer_order']);
