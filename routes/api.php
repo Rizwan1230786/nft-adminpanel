@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\contact\ContactusController;
 use App\Http\Controllers\Api\Seller\Guest\GuestController;
 use App\Http\Controllers\Api\Barber\Profile\BarberController;
 use App\Http\Controllers\Api\collection\CollectionController;
+use App\Http\Controllers\Api\payment\CustomerPaymentController;
 use App\Http\Controllers\Api\Customer\Profile\ProfileController;
 use App\Http\Controllers\Api\Seller\Services\ServicesController;
 use App\Http\Controllers\Api\Seller\Authorization\AuthController;
@@ -42,6 +43,7 @@ Route::prefix('/customer')->group(function () {
     // Route::post('/get-link-detail', [CustomerGuestController::class, 'getLinkDetail']);
     Route::group(['middleware' => 'auth:sellerServiceApi'], function () {
         Route::post('/update-user-wallet-address', [CustomerGuestController::class, 'update_user']);
+        Route::post('/payment', [CustomerPaymentController::class, 'payment']);
         Route::get('/profile', [ProfileController::class, 'customer_profile']);
         Route::post('/profile/update', [ProfileController::class, 'customer']);
         Route::post('/customer_order',[CustomerOrderController::class, 'customer_order']);

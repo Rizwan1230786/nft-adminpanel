@@ -48,7 +48,7 @@ class ItemController extends Controller
         }
         return response(['status'=>true,'items'=>$items,'recent'=>$recentitems]);
     }
-    public function submit(ItemCreation $request){
+    public function submit(Request $request){
         $statusCode = 401;
         $message = "Fill the data in proper way!";
         $floder=date('M-y');

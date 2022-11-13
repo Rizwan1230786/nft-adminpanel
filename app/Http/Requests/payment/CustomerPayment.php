@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Items;
+namespace App\Http\Requests\payment;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ItemCreation extends FormRequest
+class CustomerPayment extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -15,7 +15,6 @@ class ItemCreation extends FormRequest
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,15 +23,17 @@ class ItemCreation extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required',
+            'wallet_from' => 'required',
+            'wallet_to' => 'required',
+            'payment' => 'required'
         ];
     }
-
     public function messages()
     {
         return [
-
-            'image.required' => __('Image is required.'),
+            'wallet_from.required' => __('Wallet from is required.'),
+            'wallet_to.required' => __('Wallet to is required'),
+            'payment.required' => __('Payment to is required'),
 
         ];
     }
